@@ -1,0 +1,23 @@
+{
+  "name": "laufey-whatsapp-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bot que posta atualizações da Laufey num canal do WhatsApp",
+  "scripts": {
+    "login": "node src/login.js",
+    "run": "node src/run.js",
+    "dry": "node src/run.js --dry",
+    "cards": "node src/make-cards.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@whiskeysockets/baileys": "7.0.0-rc14",
+    "fast-xml-parser": "^5.12.1",
+    "pino": "^9.6.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

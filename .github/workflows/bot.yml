@@ -1,0 +1,54 @@
+name: Bot da Laufey
+
+on:
+  schedule:
+    # Horários em UTC. Brasília = UTC-3, então isto cobre 06:07 → 23:37 (BRT), a cada 30 min.
+    - cron: '7,37 9-23 * * *'
+    - cron: '7,37 0-2 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Forçar um post de teste (on, off, poll, mecore, icon, news) — deixe vazio para execução normal'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: laufey-bot
+  cancel-in-progress: false
+
+jobs:
+  postar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --omit=dev --no-audit --no-fund
+
+      - name: Rodar o bot
+        env:
+          AUTH_KEY: ${{ secrets.AUTH_KEY }}
+          CHANNEL_JID: ${{ secrets.CHANNEL_JID }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          FORCE: ${{ github.event.inputs.force }}
+        run: node src/run.js
+
+      - name: Salvar estado
+        if: always()
+        run: |
+          git config user.name "laufey-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json auth.enc
+          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
+          git commit -m "bot: atualiza estado"
+          git pull --rebase --autostash || true
+          git push
