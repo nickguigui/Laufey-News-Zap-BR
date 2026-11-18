@@ -15,11 +15,38 @@ const COMENTARIOS = [
   'Hoje o dia pede essa. Não discuta com o universo 🔮',
   'Essa é pra você que tá precisando de um abraço em forma de música 🫂',
   'Se bater saudade de algo que você nem viveu, a culpa é dela 🥲',
+  'Essa é daquelas que fazem o ônibus lotado virar cena de filme 🚌🎞️',
+  'Ouve uma vez com atenção na letra, depois me conta se você sobreviveu 🫠',
+  'Perfeita pra trilha sonora do seu dia, seja ele bom ou péssimo 🎬',
+  'Fecha a porta do quarto, apaga a luz e só sente 🌙',
+  'Essa aqui merece estar na sua playlist favorita. Se já tá, ouve de novo 🔁',
+  'Música certa pra dançar sozinho na cozinha enquanto faz um café ☕💃',
+  'Aviso: pode causar suspiros, lágrimas e vontade de mandar mensagem pra alguém 📱',
+  'Uma das minhas favoritas. E você, já conhecia? 👀',
+  'Se a Laufey fosse um abraço, ia soar exatamente assim 🫂',
+  'Ideal pra ouvir olhando o céu, de preferência no fim da tarde 🌅',
+  'Coloca no volume certo: alto o suficiente pra sentir, baixo o suficiente pra chorar em paz 🔉',
+  'Hoje é dia de redescobrir essa preciosidade 💎',
 ];
 
+let cache = null;
+async function catalogo() {
+  if (cache) return cache;
+  const get = async (u) => (await fetch(u, { signal: AbortSignal.timeout(20_000) })).json();
+  const { data: top = [] } = await get(`https://api.deezer.com/artist/${CONFIG.deezerArtistId}/top?limit=100`);
+  // completa com as faixas de estúdio dos álbuns (o top 100 tem versões repetidas)
+  const { data: albuns = [] } = await get(`https://api.deezer.com/artist/${CONFIG.deezerArtistId}/albums?limit=100`);
+  const estudio = albuns.filter((a) => a.record_type !== 'single' && !/live|symphony|session/i.test(a.title));
+  const extras = (await Promise.all(estudio.map((a) => get(`https://api.deezer.com/album/${a.id}`).catch(() => null))))
+    .filter(Boolean)
+    .flatMap((al) => (al.tracks?.data || []).map((t) => ({ ...t, album: { title: al.title, cover_xl: al.cover_xl } })));
+  const data = [...top, ...extras];
+  if (!data.length) throw new Error('Deezer não respondeu a lista de músicas');
+  return (cache = data);
+}
+
 export async function escolherMusica(usadas, seed, mes) {
-  const r = await fetch(`https://api.deezer.com/artist/${CONFIG.deezerArtistId}/top?limit=100`, { signal: AbortSignal.timeout(20_000) });
-  const { data } = await r.json();
+  const data = await catalogo();
   const vistas = new Set();
   let lista = data.filter((t) => t.preview && !vistas.has(norm(t.title)) && vistas.add(norm(t.title)));
   if (mes !== 12) lista = lista.filter((t) => !NATAL.test(`${t.title} ${t.album.title}`));

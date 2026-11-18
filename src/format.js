@@ -34,6 +34,54 @@ _💜- Atenção, ouvintes: o canal está ON! 📻✨ Bom dia, boa tarde, boa no
 _A programação de hoje: notícias da Laufey, votação, icon liberado e um 'me core' pra quem gosta de sofrer em jazz 🎷🖤. Beijos do Nick, bora!! 💌_
 
 (Canal abre às 6:00 e fecha às 23:30)`,
+
+  `_*CANAL ON‼️*_
+
+_💜- Plim plim! 🔔 O canal mais aconchegante do WhatsApp acabou de abrir! Bom dia, boa tarde e boa noite pra você, meu ouvinte favorito (não conta pros outros 🤫)_
+
+_Hoje tem curiosidade, música do dia, quiz pra testar se você é fã de verdade 🧠 e muito mais. Beijos do Nick, bora!! 🎀_
+
+(Canal abre às 6:00 e fecha às 23:30)`,
+
+  `_*CANAL ON‼️*_
+
+_💜- Bom dia, flor do dia! 🌷 Bom dia também pra quem acordou com cara de 'Falling Behind' 🥲 Relaxa que o canal abriu e a gente cuida de você hoje!_
+
+_Notícias, enquetes, jogos e aquele 'me core' que dói bonito 🖤. Novato por aqui? Seja muito bem-vindo! Beijos do Nick!! 💌_
+
+(Canal abre às 6:00 e fecha às 23:30)`,
+
+  `_*CANAL ON‼️*_
+
+_💜- Senhoras e senhores, ouvintes e ouvintas 🎩 O canal da Laufey está oficialmente ABERTO! Pega sua xícara, ajeita o cobertor e vem com a gente ☕🧶_
+
+_Hoje tem música do dia 🎧, curiosidade 🧠, isso ou aquilo 🤔 e quiz! Beijos do Nick, vamos começar!! ✨_
+
+(Canal abre às 6:00 e fecha às 23:30)`,
+
+  `_*CANAL ON‼️*_
+
+_💜- Bom diaaa! O despertador tocou, o violoncelo acordou 🎻 e o canal abriu! Se você chegou agora, bem-vindo à família mais sofrida e feliz do WhatsApp 🫂_
+
+_Fica de olho na programação: tem notícia, enquete, jogo e até 'me core' mais tarde 🖤. Beijos do Nick!! 💜_
+
+(Canal abre às 6:00 e fecha às 23:30)`,
+
+  `_*CANAL ON‼️*_
+
+_💜- Atenção, atenção! 📣 O jornal da Laufey está no ar! Bom dia, boa tarde e boa noite, ouvintes queridos. Quem é novo: tira o casaco e fica à vontade 🧥_
+
+_Hoje tem informação, interação e um pouquinho de sofrência pra equilibrar 😌🖤. Beijos do Nick, bora!! 🌤️_
+
+(Canal abre às 6:00 e fecha às 23:30)`,
+
+  `_*CANAL ON‼️*_
+
+_💜- Cheguei, cheguei! 🏃‍♂️💨 Bom dia, meus amores! O canal abriu e hoje promete: música do dia, quiz, enquetes e o jogo da noite 🎮_
+
+_E se o dia for difícil, lembra: sempre tem uma música da Laufey pra te abraçar 🫂. Beijos do Nick!! 💕_
+
+(Canal abre às 6:00 e fecha às 23:30)`,
 ];
 
 export const CANAL_OFF = [
@@ -60,6 +108,42 @@ _Manda amanhã, ouvinte, com coragem 😌 O canal tá fechando, mas a Laufey con
 💜- \`"Já são 23:30?! O tempo voa quando a gente tá sofrendo em jazz…"\`
 
 _Pois é, ouvinte 🥲 Hora de descansar esse coração. Amanhã tem mais notícia, enquete e 'me core'. Boa noite e beijos do Nick! 🌙🎻_`,
+
+  `_*CANAL OFF‼️*_
+
+💜- \`"Espera, espera! Eu ainda nem descobri a resposta do quiz…"\`
+
+_Descobriu sim, você só não prestou atenção 😂 Amanhã tem quiz novo pra você se redimir. Boa noite e beijos do Nick! 🌙💜_`,
+
+  `_*CANAL OFF‼️*_
+
+💜- \`"Fechou?! E agora quem vai me fazer companhia?"\`
+
+_A Laufey, ué! Coloca *While You Were Sleeping* e deixa ela te ninar 😴🎶 Amanhã às 6:00 a gente volta. Beijos do Nick! 💕_`,
+
+  `_*CANAL OFF‼️*_
+
+💜- \`"Mas eu tava gostando tanto…"\`
+
+_Eu sei, eu sei 🥺 Mas até o violoncelo precisa descansar. Amanhã tem mais música do dia, curiosidade e jogo. Durma bem e beijos do Nick! 🎻🌙_`,
+
+  `_*CANAL OFF‼️*_
+
+💜- \`"Já vai? Fica mais um pouquinho…"\`
+
+_Bem que eu queria, ouvinte, mas o Nick também precisa dormir 😂💤 Amanhã cedinho a gente volta com tudo. Boa noite! 💜✨_`,
+
+  `_*CANAL OFF‼️*_
+
+💜- \`"Como assim o dia acabou? Eu nem chorei ouvindo Promise ainda…"\`
+
+_Ainda dá tempo! Mas faz isso debaixo do cobertor, que é mais confortável 🧶😭 Boa noite e beijos do Nick! 🌙_`,
+
+  `_*CANAL OFF‼️*_
+
+💜- \`"Ah não, de novo esse aviso de fechamento…"\`
+
+_De novo e todo dia, meu amor 😌 Mas amanhã às 6:00 ele vira CANAL ON outra vez. Bons sonhos (com a Laufey, de preferência) e beijos do Nick! 💕🎻_`,
 ];
 
 export function canalOn(seed) { return pick(CANAL_ON, seed); }
@@ -98,6 +182,13 @@ export const ICON_LEGENDAS = [
   `💜 *ICON LIBERADO!* 🖼️✨\n\n_Pode salvar e usar à vontade! Só não esquece de dar os créditos pro canal, tá? 😌🎀_`,
   `💜 *ICON DO DIA!* 🖼️🎻\n\n_Esse aqui tá a sua cara, confessa 👀 Salva antes que alguém roube! 💕_`,
   `💜 *ICON LIBERADO!* 🌷\n\n_Troca a foto de perfil agora e manda print pra gente (mentira, não manda, mas usa 😂)_`,
+  `💜 *ICON NOVO NA ÁREA!* 🖼️💫\n\n_Quem pegar primeiro é o fã número 1 (regra que eu acabei de inventar) 😌_`,
+  `💜 *ICON LIBERADO!* 🎀\n\n_Esse aqui combina com um perfil que só ouve Laufey e chora em silêncio. Ou seja: todo mundo aqui 🥲_`,
+  `💜 *ICON DO DIA!* ☕\n\n_Salva, coloca de perfil e espera o crush perguntar 'quem é?' 😏 Aí você manda From The Start_`,
+  `💜 *ICON LIBERADO!* 🌙\n\n_Pra quem quer um perfil bonito e misterioso, tipo música de jazz às 2 da manhã 🎷_`,
+  `💜 *ICON FRESQUINHO!* 🖼️🍵\n\n_Acabou de sair do forno. Pode pegar, é de graça, igual o amor que a gente sente por ela 💜_`,
+  `💜 *ICON LIBERADO!* 🎻\n\n_Usa, abusa e se alguém perguntar de onde é, fala que é do canal mais fofo do WhatsApp 😌✨_`,
+  `💜 *ICON DO DIA!* 🌷\n\n_Esse é pra deixar o perfil com cheirinho de chá e livro antigo 📖☕_`,
 ];
 
 export function enqueteTexto(e) {

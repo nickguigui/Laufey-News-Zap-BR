@@ -1,24 +1,1289 @@
 [
-  { "pergunta": "Em que país a Laufey nasceu? 🌍", "opcoes": ["Noruega", "Islândia", "Dinamarca", "Suécia"], "correta": 1, "explicacao": "Ela nasceu em Reykjavík, capital da Islândia 🇮🇸" },
-  { "pergunta": "Qual instrumento clássico a Laufey toca desde criança? 🎶", "opcoes": ["Violino", "Harpa", "Violoncelo", "Flauta"], "correta": 2, "explicacao": "É o violoncelo! 🎻 (o violino é da irmã gêmea dela, a Junia)" },
-  { "pergunta": "Qual o nome da irmã gêmea da Laufey? 👯‍♀️", "opcoes": ["Júlia", "Junia", "Jana", "Lína"], "correta": 1, "explicacao": "Junia! Ela é violinista e trabalha com a Laufey 🎻" },
-  { "pergunta": "Qual álbum deu o Grammy pra Laufey? 🏆", "opcoes": ["Typical of Me", "Everything I Know About Love", "Bewitched", "A Matter of Time"], "correta": 2, "explicacao": "Bewitched levou o Grammy de Melhor Álbum Vocal Pop Tradicional em 2024 ✨" },
-  { "pergunta": "Em que faculdade a Laufey estudou? 🎓", "opcoes": ["Juilliard", "Berklee", "Harvard", "Oxford"], "correta": 1, "explicacao": "Berklee College of Music, em Boston 🎓" },
-  { "pergunta": "De qual país é a mãe da Laufey? 🌏", "opcoes": ["Japão", "Coreia do Sul", "China", "Vietnã"], "correta": 2, "explicacao": "A mãe dela é chinesa e violinista clássica 🇨🇳🎻" },
-  { "pergunta": "Qual música homenageia um trompetista de jazz? 🎺", "opcoes": ["Just Like Chet", "Dreamer", "Valentine", "Clean Air"], "correta": 0, "explicacao": "Just Like Chet, em referência ao Chet Baker 🎺" },
-  { "pergunta": "Em que ano saiu Bewitched? 🔮", "opcoes": ["2021", "2022", "2023", "2024"], "correta": 2, "explicacao": "8 de setembro de 2023 🔮" },
-  { "pergunta": "Em que ano saiu Everything I Know About Love? 💌", "opcoes": ["2020", "2021", "2022", "2023"], "correta": 2, "explicacao": "26 de agosto de 2022 💌" },
-  { "pergunta": "Em que ano saiu A Matter of Time? ⏳", "opcoes": ["2023", "2024", "2025", "2026"], "correta": 2, "explicacao": "22 de agosto de 2025 ⏳" },
-  { "pergunta": "Qual o nome do EP de estreia da Laufey? 💿", "opcoes": ["Typical of Me", "Bewitched", "The Reykjavík Sessions", "Lover Girl"], "correta": 0, "explicacao": "Typical of Me, de 2021 💿" },
-  { "pergunta": "Em que mês é o aniversário da Laufey? 🎂", "opcoes": ["Janeiro", "Abril", "Setembro", "Dezembro"], "correta": 1, "explicacao": "23 de abril! 🎂" },
-  { "pergunta": "Qual dessas músicas é do EP Typical of Me? 🎧", "opcoes": ["Like the Movies", "Promise", "Lover Girl", "Fragile"], "correta": 0, "explicacao": "Like the Movies é do Typical of Me 🎞️" },
-  { "pergunta": "Qual dessas é do álbum A Matter of Time? ⏳", "opcoes": ["Lovesick", "Clockwork", "Valentine", "Magnolia"], "correta": 1, "explicacao": "Clockwork é do A Matter of Time ⏰" },
-  { "pergunta": "Qual álbum ganhou a 'Goddess Edition'? 👑", "opcoes": ["Everything I Know About Love", "Bewitched", "A Matter of Time", "Typical of Me"], "correta": 1, "explicacao": "Bewitched: The Goddess Edition, de 2024 👑" },
-  { "pergunta": "Como se chama a edição especial de A Matter of Time? ⌛", "opcoes": ["The Last Minute", "The Final Hour", "Overtime", "Midnight Edition"], "correta": 1, "explicacao": "A Matter of Time: The Final Hour ⌛" },
-  { "pergunta": "Pra qual personagem a Laufey gravou uma música de Natal? 🎄", "opcoes": ["Garfield", "Snoopy", "Mickey", "Grinch"], "correta": 1, "explicacao": "Snoopy! Pro especial 'Snoopy Presents: 12 Days of Snoopy' 🐶" },
-  { "pergunta": "Qual o nome do EP de Natal da Laufey? ❄️", "opcoes": ["Christmas Magic", "A Very Laufey Holiday", "Laufey's Christmas", "Winter Love"], "correta": 1, "explicacao": "A Very Laufey Holiday 🎄" },
-  { "pergunta": "Em qual cidade a Laufey nasceu? 🏙️", "opcoes": ["Oslo", "Copenhague", "Reykjavík", "Helsinque"], "correta": 2, "explicacao": "Reykjavík, Islândia 🏔️" },
-  { "pergunta": "Qual dessas é um cover de um clássico do jazz no EP de estreia? 🎷", "opcoes": ["I Wish You Love", "From The Start", "Best Friend", "James"], "correta": 0, "explicacao": "I Wish You Love é um standard clássico 🎷" },
-  { "pergunta": "Em qual lugar famoso a Laufey gravou um álbum ao vivo com orquestra? 🎻", "opcoes": ["Madison Square Garden", "Hollywood Bowl", "Royal Albert Hall", "Coachella"], "correta": 1, "explicacao": "A Night At The Symphony: Live at the Hollywood Bowl 🎻" },
-  { "pergunta": "Na mitologia nórdica, Laufey é mãe de quem? ⚡", "opcoes": ["Thor", "Odin", "Loki", "Freya"], "correta": 2, "explicacao": "Do Loki! Por isso God of War aparece quando a gente pesquisa ela kkk ⚡" }
+  {
+    "pergunta": "Em que país a Laufey nasceu? 🌍",
+    "opcoes": [
+      "Noruega",
+      "Islândia",
+      "Dinamarca",
+      "Suécia"
+    ],
+    "correta": 1,
+    "explicacao": "Ela nasceu em Reykjavík, capital da Islândia 🇮🇸"
+  },
+  {
+    "pergunta": "Qual instrumento clássico a Laufey toca desde criança? 🎶",
+    "opcoes": [
+      "Violino",
+      "Harpa",
+      "Violoncelo",
+      "Flauta"
+    ],
+    "correta": 2,
+    "explicacao": "É o violoncelo! 🎻 (o violino é da irmã gêmea dela, a Junia)"
+  },
+  {
+    "pergunta": "Qual o nome da irmã gêmea da Laufey? 👯‍♀️",
+    "opcoes": [
+      "Júlia",
+      "Junia",
+      "Jana",
+      "Lína"
+    ],
+    "correta": 1,
+    "explicacao": "Junia! Ela é violinista e trabalha com a Laufey 🎻"
+  },
+  {
+    "pergunta": "Qual álbum deu o Grammy pra Laufey? 🏆",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 2,
+    "explicacao": "Bewitched levou o Grammy de Melhor Álbum Vocal Pop Tradicional em 2024 ✨"
+  },
+  {
+    "pergunta": "Em que faculdade a Laufey estudou? 🎓",
+    "opcoes": [
+      "Juilliard",
+      "Berklee",
+      "Harvard",
+      "Oxford"
+    ],
+    "correta": 1,
+    "explicacao": "Berklee College of Music, em Boston 🎓"
+  },
+  {
+    "pergunta": "De qual país é a mãe da Laufey? 🌏",
+    "opcoes": [
+      "Japão",
+      "Coreia do Sul",
+      "China",
+      "Vietnã"
+    ],
+    "correta": 2,
+    "explicacao": "A mãe dela é chinesa e violinista clássica 🇨🇳🎻"
+  },
+  {
+    "pergunta": "Qual música homenageia um trompetista de jazz? 🎺",
+    "opcoes": [
+      "Just Like Chet",
+      "Dreamer",
+      "Valentine",
+      "Clean Air"
+    ],
+    "correta": 0,
+    "explicacao": "Just Like Chet, em referência ao Chet Baker 🎺"
+  },
+  {
+    "pergunta": "Em que ano saiu Bewitched? 🔮",
+    "opcoes": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "correta": 2,
+    "explicacao": "8 de setembro de 2023 🔮"
+  },
+  {
+    "pergunta": "Em que ano saiu Everything I Know About Love? 💌",
+    "opcoes": [
+      "2020",
+      "2021",
+      "2022",
+      "2023"
+    ],
+    "correta": 2,
+    "explicacao": "26 de agosto de 2022 💌"
+  },
+  {
+    "pergunta": "Em que ano saiu A Matter of Time? ⏳",
+    "opcoes": [
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "correta": 2,
+    "explicacao": "22 de agosto de 2025 ⏳"
+  },
+  {
+    "pergunta": "Qual o nome do EP de estreia da Laufey? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Bewitched",
+      "The Reykjavík Sessions",
+      "Lover Girl"
+    ],
+    "correta": 0,
+    "explicacao": "Typical of Me, de 2021 💿"
+  },
+  {
+    "pergunta": "Em que mês é o aniversário da Laufey? 🎂",
+    "opcoes": [
+      "Janeiro",
+      "Abril",
+      "Setembro",
+      "Dezembro"
+    ],
+    "correta": 1,
+    "explicacao": "23 de abril! 🎂"
+  },
+  {
+    "pergunta": "Qual dessas músicas é do EP Typical of Me? 🎧",
+    "opcoes": [
+      "Like the Movies",
+      "Promise",
+      "Lover Girl",
+      "Fragile"
+    ],
+    "correta": 0,
+    "explicacao": "Like the Movies é do Typical of Me 🎞️"
+  },
+  {
+    "pergunta": "Qual dessas é do álbum A Matter of Time? ⏳",
+    "opcoes": [
+      "Lovesick",
+      "Clockwork",
+      "Valentine",
+      "Magnolia"
+    ],
+    "correta": 1,
+    "explicacao": "Clockwork é do A Matter of Time ⏰"
+  },
+  {
+    "pergunta": "Qual álbum ganhou a 'Goddess Edition'? 👑",
+    "opcoes": [
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time",
+      "Typical of Me"
+    ],
+    "correta": 1,
+    "explicacao": "Bewitched: The Goddess Edition, de 2024 👑"
+  },
+  {
+    "pergunta": "Como se chama a edição especial de A Matter of Time? ⌛",
+    "opcoes": [
+      "The Last Minute",
+      "The Final Hour",
+      "Overtime",
+      "Midnight Edition"
+    ],
+    "correta": 1,
+    "explicacao": "A Matter of Time: The Final Hour ⌛"
+  },
+  {
+    "pergunta": "Pra qual personagem a Laufey gravou uma música de Natal? 🎄",
+    "opcoes": [
+      "Garfield",
+      "Snoopy",
+      "Mickey",
+      "Grinch"
+    ],
+    "correta": 1,
+    "explicacao": "Snoopy! Pro especial 'Snoopy Presents: 12 Days of Snoopy' 🐶"
+  },
+  {
+    "pergunta": "Qual o nome do EP de Natal da Laufey? ❄️",
+    "opcoes": [
+      "Christmas Magic",
+      "A Very Laufey Holiday",
+      "Laufey's Christmas",
+      "Winter Love"
+    ],
+    "correta": 1,
+    "explicacao": "A Very Laufey Holiday 🎄"
+  },
+  {
+    "pergunta": "Em qual cidade a Laufey nasceu? 🏙️",
+    "opcoes": [
+      "Oslo",
+      "Copenhague",
+      "Reykjavík",
+      "Helsinque"
+    ],
+    "correta": 2,
+    "explicacao": "Reykjavík, Islândia 🏔️"
+  },
+  {
+    "pergunta": "Qual dessas é um cover de um clássico do jazz no EP de estreia? 🎷",
+    "opcoes": [
+      "I Wish You Love",
+      "From The Start",
+      "Best Friend",
+      "James"
+    ],
+    "correta": 0,
+    "explicacao": "I Wish You Love é um standard clássico 🎷"
+  },
+  {
+    "pergunta": "Em qual lugar famoso a Laufey gravou um álbum ao vivo com orquestra? 🎻",
+    "opcoes": [
+      "Madison Square Garden",
+      "Hollywood Bowl",
+      "Royal Albert Hall",
+      "Coachella"
+    ],
+    "correta": 1,
+    "explicacao": "A Night At The Symphony: Live at the Hollywood Bowl 🎻"
+  },
+  {
+    "pergunta": "Na mitologia nórdica, Laufey é mãe de quem? ⚡",
+    "opcoes": [
+      "Thor",
+      "Odin",
+      "Loki",
+      "Freya"
+    ],
+    "correta": 2,
+    "explicacao": "Do Loki! Por isso God of War aparece quando a gente pesquisa ela kkk ⚡"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Street by Street*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Typical of Me"
+    ],
+    "correta": 3,
+    "explicacao": "*Street by Street* é a 1ª faixa do *Typical of Me* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Magnolia*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "A Matter of Time",
+      "Bewitched",
+      "Everything I Know About Love"
+    ],
+    "correta": 0,
+    "explicacao": "*Magnolia* é a 2ª faixa do *Typical of Me* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Like the Movies*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 0,
+    "explicacao": "*Like the Movies* é a 3ª faixa do *Typical of Me* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *I Wish You Love*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Bewitched",
+      "Typical of Me",
+      "Everything I Know About Love"
+    ],
+    "correta": 2,
+    "explicacao": "*I Wish You Love* é a 4ª faixa do *Typical of Me* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *James*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Typical of Me"
+    ],
+    "correta": 3,
+    "explicacao": "*James* é a 5ª faixa do *Typical of Me* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Someone New*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Everything I Know About Love",
+      "Typical of Me",
+      "A Matter of Time"
+    ],
+    "correta": 2,
+    "explicacao": "*Someone New* é a 6ª faixa do *Typical of Me* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Best Friend*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Typical of Me",
+      "Bewitched"
+    ],
+    "correta": 2,
+    "explicacao": "*Best Friend* é a 7ª faixa do *Typical of Me* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Fragile*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Bewitched"
+    ],
+    "correta": 2,
+    "explicacao": "*Fragile* é a 1ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Beautiful Stranger*? 💿",
+    "opcoes": [
+      "Everything I Know About Love",
+      "Typical of Me",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 0,
+    "explicacao": "*Beautiful Stranger* é a 2ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Valentine*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Typical of Me",
+      "Bewitched"
+    ],
+    "correta": 1,
+    "explicacao": "*Valentine* é a 3ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Above The Chinese Restaurant*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched"
+    ],
+    "correta": 2,
+    "explicacao": "*Above The Chinese Restaurant* é a 4ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Dear Soulmate*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Typical of Me",
+      "Bewitched"
+    ],
+    "correta": 1,
+    "explicacao": "*Dear Soulmate* é a 5ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *What Love Will Do to You*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Bewitched"
+    ],
+    "correta": 2,
+    "explicacao": "*What Love Will Do to You* é a 6ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *I've Never Been In Love Before*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Bewitched",
+      "Everything I Know About Love",
+      "Typical of Me"
+    ],
+    "correta": 2,
+    "explicacao": "*I've Never Been In Love Before* é a 7ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Just Like Chet*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Bewitched",
+      "Everything I Know About Love",
+      "Typical of Me"
+    ],
+    "correta": 2,
+    "explicacao": "*Just Like Chet* é a 8ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Everything I Know About Love*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 1,
+    "explicacao": "*Everything I Know About Love* é a 9ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Falling Behind*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 1,
+    "explicacao": "*Falling Behind* é a 10ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Hi*? 💿",
+    "opcoes": [
+      "Everything I Know About Love",
+      "A Matter of Time",
+      "Bewitched",
+      "Typical of Me"
+    ],
+    "correta": 0,
+    "explicacao": "*Hi* é a 11ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Dance With You Tonight*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Bewitched",
+      "Typical of Me",
+      "Everything I Know About Love"
+    ],
+    "correta": 3,
+    "explicacao": "*Dance With You Tonight* é a 12ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Night Light*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Typical of Me",
+      "Everything I Know About Love",
+      "A Matter of Time"
+    ],
+    "correta": 2,
+    "explicacao": "*Night Light* é a 13ª faixa do *Everything I Know About Love* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Dreamer*? 💿",
+    "opcoes": [
+      "Everything I Know About Love",
+      "Bewitched",
+      "Typical of Me",
+      "A Matter of Time"
+    ],
+    "correta": 1,
+    "explicacao": "*Dreamer* é a 1ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Second Best*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 2,
+    "explicacao": "*Second Best* é a 2ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Haunted*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "A Matter of Time",
+      "Bewitched"
+    ],
+    "correta": 3,
+    "explicacao": "*Haunted* é a 3ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Must Be Love*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "A Matter of Time",
+      "Bewitched"
+    ],
+    "correta": 3,
+    "explicacao": "*Must Be Love* é a 4ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *While You Were Sleeping*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Typical of Me",
+      "Everything I Know About Love",
+      "A Matter of Time"
+    ],
+    "correta": 0,
+    "explicacao": "*While You Were Sleeping* é a 5ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Lovesick*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched"
+    ],
+    "correta": 3,
+    "explicacao": "*Lovesick* é a 6ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *California and Me*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Everything I Know About Love",
+      "A Matter of Time",
+      "Typical of Me"
+    ],
+    "correta": 0,
+    "explicacao": "*California and Me* é a 7ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Promise*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Typical of Me",
+      "Everything I Know About Love",
+      "A Matter of Time"
+    ],
+    "correta": 0,
+    "explicacao": "*Promise* é a 9ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *From The Start*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "A Matter of Time",
+      "Bewitched"
+    ],
+    "correta": 3,
+    "explicacao": "*From The Start* é a 10ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Misty*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 2,
+    "explicacao": "*Misty* é a 11ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Serendipity*? 💿",
+    "opcoes": [
+      "Everything I Know About Love",
+      "Typical of Me",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 2,
+    "explicacao": "*Serendipity* é a 12ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Letter To My 13 Year Old Self*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Bewitched"
+    ],
+    "correta": 3,
+    "explicacao": "*Letter To My 13 Year Old Self* é a 13ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Bewitched*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Bewitched",
+      "Everything I Know About Love",
+      "Typical of Me"
+    ],
+    "correta": 1,
+    "explicacao": "*Bewitched* é a 14ª faixa do *Bewitched* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Clockwork*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Everything I Know About Love",
+      "Typical of Me",
+      "A Matter of Time"
+    ],
+    "correta": 3,
+    "explicacao": "*Clockwork* é a 1ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Lover Girl*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Everything I Know About Love",
+      "Typical of Me",
+      "A Matter of Time"
+    ],
+    "correta": 3,
+    "explicacao": "*Lover Girl* é a 2ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Snow White*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Typical of Me",
+      "Everything I Know About Love",
+      "A Matter of Time"
+    ],
+    "correta": 3,
+    "explicacao": "*Snow White* é a 3ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Castle in Hollywood*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "A Matter of Time",
+      "Bewitched",
+      "Everything I Know About Love"
+    ],
+    "correta": 1,
+    "explicacao": "*Castle in Hollywood* é a 4ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Carousel*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Typical of Me",
+      "A Matter of Time",
+      "Everything I Know About Love"
+    ],
+    "correta": 2,
+    "explicacao": "*Carousel* é a 5ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Silver Lining*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Everything I Know About Love",
+      "A Matter of Time",
+      "Typical of Me"
+    ],
+    "correta": 2,
+    "explicacao": "*Silver Lining* é a 6ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Too Little, Too Late*? 💿",
+    "opcoes": [
+      "Everything I Know About Love",
+      "A Matter of Time",
+      "Bewitched",
+      "Typical of Me"
+    ],
+    "correta": 1,
+    "explicacao": "*Too Little, Too Late* é a 7ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Forget-Me-Not*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Bewitched",
+      "Typical of Me",
+      "Everything I Know About Love"
+    ],
+    "correta": 0,
+    "explicacao": "*Forget-Me-Not* é a 9ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Tough Luck*? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "A Matter of Time",
+      "Bewitched"
+    ],
+    "correta": 2,
+    "explicacao": "*Tough Luck* é a 10ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *A Cautionary Tale*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "A Matter of Time",
+      "Typical of Me",
+      "Everything I Know About Love"
+    ],
+    "correta": 1,
+    "explicacao": "*A Cautionary Tale* é a 11ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Mr. Eclectic*? 💿",
+    "opcoes": [
+      "Everything I Know About Love",
+      "Typical of Me",
+      "Bewitched",
+      "A Matter of Time"
+    ],
+    "correta": 3,
+    "explicacao": "*Mr. Eclectic* é a 12ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Clean Air*? 💿",
+    "opcoes": [
+      "Bewitched",
+      "Typical of Me",
+      "A Matter of Time",
+      "Everything I Know About Love"
+    ],
+    "correta": 2,
+    "explicacao": "*Clean Air* é a 13ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Em qual álbum está a música *Sabotage*? 💿",
+    "opcoes": [
+      "A Matter of Time",
+      "Everything I Know About Love",
+      "Typical of Me",
+      "Bewitched"
+    ],
+    "correta": 0,
+    "explicacao": "*Sabotage* é a 14ª faixa do *A Matter of Time* 🎶"
+  },
+  {
+    "pergunta": "Qual é a primeira música do *Typical of Me*? 🎧",
+    "opcoes": [
+      "Street by Street",
+      "Best Friend",
+      "Someone New",
+      "Like the Movies"
+    ],
+    "correta": 0,
+    "explicacao": "O *Typical of Me* abre com *Street by Street* ✨"
+  },
+  {
+    "pergunta": "Qual é a última música do *Typical of Me*? 🎧",
+    "opcoes": [
+      "I Wish You Love",
+      "Magnolia",
+      "Best Friend",
+      "James"
+    ],
+    "correta": 2,
+    "explicacao": "O *Typical of Me* fecha com *Best Friend* ✨"
+  },
+  {
+    "pergunta": "Quantas músicas tem o *Typical of Me* (edição original)? 🔢",
+    "opcoes": [
+      "5",
+      "7",
+      "8",
+      "10"
+    ],
+    "correta": 1,
+    "explicacao": "São *7 faixas*, quase 21 minutos de Laufey 🎶"
+  },
+  {
+    "pergunta": "Qual dessas é a música mais longa do *Typical of Me*? ⏱️",
+    "opcoes": [
+      "Street by Street",
+      "James",
+      "Someone New",
+      "Magnolia"
+    ],
+    "correta": 0,
+    "explicacao": "*Street by Street*, com 3:44 ⏱️"
+  },
+  {
+    "pergunta": "Qual é a primeira música do *Everything I Know About Love*? 🎧",
+    "opcoes": [
+      "Fragile",
+      "Night Light",
+      "Beautiful Stranger",
+      "Falling Behind"
+    ],
+    "correta": 0,
+    "explicacao": "O *Everything I Know About Love* abre com *Fragile* ✨"
+  },
+  {
+    "pergunta": "Qual é a última música do *Everything I Know About Love*? 🎧",
+    "opcoes": [
+      "What Love Will Do to You",
+      "Night Light",
+      "Just Like Chet",
+      "Beautiful Stranger"
+    ],
+    "correta": 1,
+    "explicacao": "O *Everything I Know About Love* fecha com *Night Light* ✨"
+  },
+  {
+    "pergunta": "Quantas músicas tem o *Everything I Know About Love* (edição original)? 🔢",
+    "opcoes": [
+      "11",
+      "13",
+      "14",
+      "16"
+    ],
+    "correta": 1,
+    "explicacao": "São *13 faixas*, quase 45 minutos de Laufey 🎶"
+  },
+  {
+    "pergunta": "Qual dessas é a música mais longa do *Everything I Know About Love*? ⏱️",
+    "opcoes": [
+      "Dear Soulmate",
+      "Hi",
+      "Falling Behind",
+      "Valentine"
+    ],
+    "correta": 0,
+    "explicacao": "*Dear Soulmate*, com 4:20 ⏱️"
+  },
+  {
+    "pergunta": "Qual é a primeira música do *Bewitched*? 🎧",
+    "opcoes": [
+      "While You Were Sleeping",
+      "From The Start",
+      "Serendipity",
+      "Dreamer"
+    ],
+    "correta": 3,
+    "explicacao": "O *Bewitched* abre com *Dreamer* ✨"
+  },
+  {
+    "pergunta": "Qual é a última música do *Bewitched*? 🎧",
+    "opcoes": [
+      "Dreamer",
+      "Haunted",
+      "Must Be Love",
+      "Bewitched"
+    ],
+    "correta": 3,
+    "explicacao": "O *Bewitched* fecha com *Bewitched* ✨"
+  },
+  {
+    "pergunta": "Quantas músicas tem o *Bewitched* (edição original)? 🔢",
+    "opcoes": [
+      "12",
+      "14",
+      "15",
+      "17"
+    ],
+    "correta": 1,
+    "explicacao": "São *14 faixas*, quase 48 minutos de Laufey 🎶"
+  },
+  {
+    "pergunta": "Qual dessas é a música mais longa do *Bewitched*? ⏱️",
+    "opcoes": [
+      "Promise",
+      "Letter To My 13 Year Old Self",
+      "Serendipity",
+      "Must Be Love"
+    ],
+    "correta": 1,
+    "explicacao": "*Letter To My 13 Year Old Self*, com 4:22 ⏱️"
+  },
+  {
+    "pergunta": "Qual é a primeira música do *A Matter of Time*? 🎧",
+    "opcoes": [
+      "A Cautionary Tale",
+      "Clockwork",
+      "Clean Air",
+      "Castle in Hollywood"
+    ],
+    "correta": 1,
+    "explicacao": "O *A Matter of Time* abre com *Clockwork* ✨"
+  },
+  {
+    "pergunta": "Qual é a última música do *A Matter of Time*? 🎧",
+    "opcoes": [
+      "Sabotage",
+      "Mr. Eclectic",
+      "Snow White",
+      "Clean Air"
+    ],
+    "correta": 0,
+    "explicacao": "O *A Matter of Time* fecha com *Sabotage* ✨"
+  },
+  {
+    "pergunta": "Quantas músicas tem o *A Matter of Time* (edição original)? 🔢",
+    "opcoes": [
+      "12",
+      "14",
+      "15",
+      "17"
+    ],
+    "correta": 1,
+    "explicacao": "São *14 faixas*, quase 45 minutos de Laufey 🎶"
+  },
+  {
+    "pergunta": "Qual dessas é a música mais longa do *A Matter of Time*? ⏱️",
+    "opcoes": [
+      "Too Little, Too Late",
+      "A Cautionary Tale",
+      "Tough Luck",
+      "Lover Girl"
+    ],
+    "correta": 1,
+    "explicacao": "*A Cautionary Tale*, com 4:16 ⏱️"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou na *Bewitched: The Goddess Edition*? 👑",
+    "opcoes": [
+      "Bored",
+      "Dear Soulmate",
+      "Snow White",
+      "Falling Behind"
+    ],
+    "correta": 0,
+    "explicacao": "*Bored* é uma das faixas extras da Goddess Edition 👑"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou na *Bewitched: The Goddess Edition*? 👑",
+    "opcoes": [
+      "Trouble",
+      "Dance With You Tonight",
+      "Dear Soulmate",
+      "A Cautionary Tale"
+    ],
+    "correta": 0,
+    "explicacao": "*Trouble* é uma das faixas extras da Goddess Edition 👑"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou na *Bewitched: The Goddess Edition*? 👑",
+    "opcoes": [
+      "Tough Luck",
+      "Fragile",
+      "Hi",
+      "It Could Happen To You"
+    ],
+    "correta": 3,
+    "explicacao": "*It Could Happen To You* é uma das faixas extras da Goddess Edition 👑"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou na *Bewitched: The Goddess Edition*? 👑",
+    "opcoes": [
+      "A Cautionary Tale",
+      "Goddess",
+      "Street by Street",
+      "Someone New"
+    ],
+    "correta": 1,
+    "explicacao": "*Goddess* é uma das faixas extras da Goddess Edition 👑"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou em *A Matter of Time: The Final Hour*? ⌛",
+    "opcoes": [
+      "Magnolia",
+      "Seems Like Old Times",
+      "Above The Chinese Restaurant",
+      "Haunted"
+    ],
+    "correta": 1,
+    "explicacao": "*Seems Like Old Times* é uma das faixas novas do The Final Hour ⌛"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou em *A Matter of Time: The Final Hour*? ⌛",
+    "opcoes": [
+      "Madwoman",
+      "Fragile",
+      "I've Never Been In Love Before",
+      "Hi"
+    ],
+    "correta": 0,
+    "explicacao": "*Madwoman* é uma das faixas novas do The Final Hour ⌛"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou em *A Matter of Time: The Final Hour*? ⌛",
+    "opcoes": [
+      "Best Friend",
+      "Falling Behind",
+      "Beautiful Stranger",
+      "How I Get"
+    ],
+    "correta": 3,
+    "explicacao": "*How I Get* é uma das faixas novas do The Final Hour ⌛"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou em *A Matter of Time: The Final Hour*? ⌛",
+    "opcoes": [
+      "Haunted",
+      "I Wait, I Wait, I Wait",
+      "I Wish You Love",
+      "Best Friend"
+    ],
+    "correta": 1,
+    "explicacao": "*I Wait, I Wait, I Wait* é uma das faixas novas do The Final Hour ⌛"
+  },
+  {
+    "pergunta": "Qual dessas músicas entrou em *A Matter of Time: The Final Hour*? ⌛",
+    "opcoes": [
+      "Hi",
+      "Dreamer",
+      "Bewitched",
+      "I'll Forget About You (In Time)"
+    ],
+    "correta": 3,
+    "explicacao": "*I'll Forget About You (In Time)* é uma das faixas novas do The Final Hour ⌛"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *How I Get*? 📅",
+    "opcoes": [
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "correta": 3,
+    "explicacao": "*How I Get* saiu em 25/02/2026 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Snow White*? 📅",
+    "opcoes": [
+      "2024",
+      "2025",
+      "2026",
+      "2027"
+    ],
+    "correta": 1,
+    "explicacao": "*Snow White* saiu em 07/08/2025 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Lover Girl*? 📅",
+    "opcoes": [
+      "2024",
+      "2025",
+      "2026",
+      "2027"
+    ],
+    "correta": 1,
+    "explicacao": "*Lover Girl* saiu em 25/06/2025 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Tough Luck*? 📅",
+    "opcoes": [
+      "2024",
+      "2025",
+      "2026",
+      "2027"
+    ],
+    "correta": 1,
+    "explicacao": "*Tough Luck* saiu em 15/05/2025 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Silver Lining*? 📅",
+    "opcoes": [
+      "2024",
+      "2025",
+      "2026",
+      "2027"
+    ],
+    "correta": 1,
+    "explicacao": "*Silver Lining* saiu em 03/04/2025 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Where or When*? 📅",
+    "opcoes": [
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "correta": 1,
+    "explicacao": "*Where or When* saiu em 19/07/2024 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Goddess*? 📅",
+    "opcoes": [
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "correta": 1,
+    "explicacao": "*Goddess* saiu em 06/03/2024 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Winter Wonderland*? 📅",
+    "opcoes": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "correta": 1,
+    "explicacao": "*Winter Wonderland* saiu em 15/12/2023 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Christmas With You*? 📅",
+    "opcoes": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "correta": 1,
+    "explicacao": "*Christmas With You* saiu em 10/11/2023 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *A Night To Remember*? 📅",
+    "opcoes": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "correta": 1,
+    "explicacao": "*A Night To Remember* saiu em 20/10/2023 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *California and Me*? 📅",
+    "opcoes": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "correta": 1,
+    "explicacao": "*California and Me* saiu em 24/08/2023 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Bewitched*? 📅",
+    "opcoes": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "correta": 1,
+    "explicacao": "*Bewitched* saiu em 26/07/2023 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Promise*? 📅",
+    "opcoes": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "correta": 1,
+    "explicacao": "*Promise* saiu em 14/06/2023 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *From The Start*? 📅",
+    "opcoes": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "correta": 1,
+    "explicacao": "*From The Start* saiu em 11/05/2023 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Ain't Christmas*? 📅",
+    "opcoes": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "correta": 1,
+    "explicacao": "*Ain't Christmas* saiu em 02/12/2022 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Falling Behind*? 📅",
+    "opcoes": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "correta": 1,
+    "explicacao": "*Falling Behind* saiu em 11/08/2022 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Dear Soulmate*? 📅",
+    "opcoes": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "correta": 1,
+    "explicacao": "*Dear Soulmate* saiu em 06/07/2022 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Everything I Know About Love*? 📅",
+    "opcoes": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "correta": 1,
+    "explicacao": "*Everything I Know About Love* saiu em 21/04/2022 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Valentine*? 📅",
+    "opcoes": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "correta": 1,
+    "explicacao": "*Valentine* saiu em 14/02/2022 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Love to Keep Me Warm*? 📅",
+    "opcoes": [
+      "2020",
+      "2021",
+      "2022",
+      "2023"
+    ],
+    "correta": 1,
+    "explicacao": "*Love to Keep Me Warm* saiu em 03/12/2021 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Love Flew Away*? 📅",
+    "opcoes": [
+      "2020",
+      "2021",
+      "2022",
+      "2023"
+    ],
+    "correta": 1,
+    "explicacao": "*Love Flew Away* saiu em 07/10/2021 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Let You Break My Heart Again*? 📅",
+    "opcoes": [
+      "2020",
+      "2021",
+      "2022",
+      "2023"
+    ],
+    "correta": 1,
+    "explicacao": "*Let You Break My Heart Again* saiu em 13/08/2021 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Someone New*? 📅",
+    "opcoes": [
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "correta": 1,
+    "explicacao": "*Someone New* saiu em 25/05/2020 📅"
+  },
+  {
+    "pergunta": "Em que ano saiu o single *Street by Street*? 📅",
+    "opcoes": [
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "correta": 1,
+    "explicacao": "*Street by Street* saiu em 06/04/2020 📅"
+  }
 ]

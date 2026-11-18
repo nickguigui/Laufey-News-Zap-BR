@@ -1,30 +1,377 @@
 {
   "issoOuAquilo": [
-    ["From The Start", "Valentine"],
-    ["Promise", "Fragile"],
-    ["Lover Girl", "Tough Luck"],
-    ["Bewitched", "Everything I Know About Love"],
-    ["Silver Lining", "Forget-Me-Not"],
-    ["Lovesick", "Must Be Love"],
-    ["Falling Behind", "Second Best"],
-    ["Dreamer", "While You Were Sleeping"],
-    ["Clockwork", "Castle in Hollywood"],
-    ["Snow White", "Letter To My 13 Year Old Self"],
-    ["Beautiful Stranger", "Dear Soulmate"],
-    ["Like the Movies", "Street by Street"],
-    ["Mr. Eclectic", "Sabotage"],
-    ["Goddess", "Haunted"],
-    ["Carousel", "Clean Air"],
-    ["Too Little, Too Late", "A Cautionary Tale"],
-    ["Santa Baby", "Winter Wonderland"],
-    ["Just Like Chet", "Above The Chinese Restaurant"],
-    ["Laufey de vestido vintage 👗", "Laufey de suéter aconchegante 🧶"],
-    ["Show com orquestra 🎻", "Show intimista só piano 🎹"],
-    ["Chá com a Laufey ☕", "Ensaio de violoncelo com a Laufey 🎻"],
-    ["Era Bewitched 🔮", "Era A Matter of Time ⏳"],
-    ["Ouvir no fone sofrendo 🎧😭", "Ouvir no carro cantando alto 🚗🎤"],
-    ["Inverno na Islândia ❄️🇮🇸", "Verão no Brasil ☀️🇧🇷"],
-    ["Música triste que cura 🖤", "Música fofa que alegra 💖"]
+    [
+      "From The Start",
+      "Valentine"
+    ],
+    [
+      "Promise",
+      "Fragile"
+    ],
+    [
+      "Lover Girl",
+      "Tough Luck"
+    ],
+    [
+      "Bewitched",
+      "Everything I Know About Love"
+    ],
+    [
+      "Silver Lining",
+      "Forget-Me-Not"
+    ],
+    [
+      "Lovesick",
+      "Must Be Love"
+    ],
+    [
+      "Falling Behind",
+      "Second Best"
+    ],
+    [
+      "Dreamer",
+      "While You Were Sleeping"
+    ],
+    [
+      "Clockwork",
+      "Castle in Hollywood"
+    ],
+    [
+      "Snow White",
+      "Letter To My 13 Year Old Self"
+    ],
+    [
+      "Beautiful Stranger",
+      "Dear Soulmate"
+    ],
+    [
+      "Like the Movies",
+      "Street by Street"
+    ],
+    [
+      "Mr. Eclectic",
+      "Sabotage"
+    ],
+    [
+      "Goddess",
+      "Haunted"
+    ],
+    [
+      "Carousel",
+      "Clean Air"
+    ],
+    [
+      "Too Little, Too Late",
+      "A Cautionary Tale"
+    ],
+    [
+      "Santa Baby",
+      "Winter Wonderland"
+    ],
+    [
+      "Just Like Chet",
+      "Above The Chinese Restaurant"
+    ],
+    [
+      "Laufey de vestido vintage 👗",
+      "Laufey de suéter aconchegante 🧶"
+    ],
+    [
+      "Show com orquestra 🎻",
+      "Show intimista só piano 🎹"
+    ],
+    [
+      "Chá com a Laufey ☕",
+      "Ensaio de violoncelo com a Laufey 🎻"
+    ],
+    [
+      "Era Bewitched 🔮",
+      "Era A Matter of Time ⏳"
+    ],
+    [
+      "Ouvir no fone sofrendo 🎧😭",
+      "Ouvir no carro cantando alto 🚗🎤"
+    ],
+    [
+      "Inverno na Islândia ❄️🇮🇸",
+      "Verão no Brasil ☀️🇧🇷"
+    ],
+    [
+      "Música triste que cura 🖤",
+      "Música fofa que alegra 💖"
+    ],
+    [
+      "Clockwork",
+      "Carousel"
+    ],
+    [
+      "Madwoman",
+      "How I Get"
+    ],
+    [
+      "Seems Like Old Times",
+      "I Wait, I Wait, I Wait"
+    ],
+    [
+      "Bored",
+      "Trouble"
+    ],
+    [
+      "Serendipity",
+      "Misty"
+    ],
+    [
+      "Night Light",
+      "Hi"
+    ],
+    [
+      "Magnolia",
+      "James"
+    ],
+    [
+      "Someone New",
+      "Best Friend"
+    ],
+    [
+      "Christmas Magic",
+      "The Christmas Waltz"
+    ],
+    [
+      "Love Flew Away",
+      "Let You Break My Heart Again"
+    ],
+    [
+      "Typical of Me",
+      "A Matter of Time"
+    ],
+    [
+      "Versão de estúdio 🎧",
+      "Versão ao vivo 🎤"
+    ],
+    [
+      "Laufey de manhã ☀️",
+      "Laufey de madrugada 🌙"
+    ],
+    [
+      "Chorar no banho 🚿",
+      "Chorar no ônibus 🚌"
+    ],
+    [
+      "Show no Brasil 🇧🇷",
+      "Show na Islândia 🇮🇸"
+    ],
+    [
+      "Ganhar o violoncelo dela 🎻",
+      "Ganhar um vestido dela 👗"
+    ],
+    [
+      "Conhecer a Laufey 🤝",
+      "Conhecer a Junia 👯‍♀️"
+    ],
+    [
+      "Playlist triste 🖤",
+      "Playlist fofa 💖"
+    ],
+    [
+      "Vinil 💿",
+      "Streaming 📱"
+    ],
+    [
+      "Chuva 🌧️",
+      "Neve ❄️"
+    ],
+    [
+      "Street by Street",
+      "Magnolia"
+    ],
+    [
+      "Like the Movies",
+      "I Wish You Love"
+    ],
+    [
+      "James",
+      "Someone New"
+    ],
+    [
+      "Fragile",
+      "Beautiful Stranger"
+    ],
+    [
+      "Valentine",
+      "Above The Chinese Restaurant"
+    ],
+    [
+      "Dear Soulmate",
+      "What Love Will Do to You"
+    ],
+    [
+      "I've Never Been In Love Before",
+      "Just Like Chet"
+    ],
+    [
+      "Everything I Know About Love",
+      "Falling Behind"
+    ],
+    [
+      "Hi",
+      "Dance With You Tonight"
+    ],
+    [
+      "Dreamer",
+      "Second Best"
+    ],
+    [
+      "Haunted",
+      "Must Be Love"
+    ],
+    [
+      "While You Were Sleeping",
+      "Lovesick"
+    ],
+    [
+      "California and Me",
+      "Promise"
+    ],
+    [
+      "From The Start",
+      "Misty"
+    ],
+    [
+      "Serendipity",
+      "Letter To My 13 Year Old Self"
+    ],
+    [
+      "Clockwork",
+      "Lover Girl"
+    ],
+    [
+      "Snow White",
+      "Castle in Hollywood"
+    ],
+    [
+      "Carousel",
+      "Silver Lining"
+    ],
+    [
+      "Too Little, Too Late",
+      "Forget-Me-Not"
+    ],
+    [
+      "Tough Luck",
+      "A Cautionary Tale"
+    ],
+    [
+      "Mr. Eclectic",
+      "Clean Air"
+    ],
+    [
+      "Valentine",
+      "Mr. Eclectic"
+    ],
+    [
+      "I Wish You Love",
+      "From The Start"
+    ],
+    [
+      "Dear Soulmate",
+      "Above The Chinese Restaurant"
+    ],
+    [
+      "Carousel",
+      "Must Be Love"
+    ],
+    [
+      "Dance With You Tonight",
+      "Best Friend"
+    ],
+    [
+      "Everything I Know About Love",
+      "Too Little, Too Late"
+    ],
+    [
+      "Falling Behind",
+      "Just Like Chet"
+    ],
+    [
+      "Castle in Hollywood",
+      "Tough Luck"
+    ],
+    [
+      "Lovesick",
+      "Snow White"
+    ],
+    [
+      "What Love Will Do to You",
+      "Dreamer"
+    ],
+    [
+      "Lover Girl",
+      "Street by Street"
+    ],
+    [
+      "Hi",
+      "Someone New"
+    ],
+    [
+      "James",
+      "Misty"
+    ],
+    [
+      "Serendipity",
+      "Second Best"
+    ],
+    [
+      "I've Never Been In Love Before",
+      "Letter To My 13 Year Old Self"
+    ],
+    [
+      "Café ☕",
+      "Chá 🍵"
+    ],
+    [
+      "Livro 📖",
+      "Filme 🎬"
+    ],
+    [
+      "Piano 🎹",
+      "Violoncelo 🎻"
+    ],
+    [
+      "Vestido vintage 👗",
+      "Suéter de tricô 🧶"
+    ],
+    [
+      "Show lotado 🏟️",
+      "Show intimista 🕯️"
+    ],
+    [
+      "Ouvir álbum inteiro 💿",
+      "Ouvir no aleatório 🔀"
+    ],
+    [
+      "Biblioteca 📚",
+      "Cafeteria ☕"
+    ],
+    [
+      "Cartinha escrita à mão ✉️",
+      "Mensagem de áudio 🎙️"
+    ],
+    [
+      "Pôr do sol 🌅",
+      "Noite estrelada 🌌"
+    ],
+    [
+      "Paris 🗼",
+      "Reykjavík 🏔️"
+    ],
+    [
+      "Jazz 🎷",
+      "Música clássica 🎼"
+    ],
+    [
+      "Natal 🎄",
+      "Dia dos Namorados 💌"
+    ]
   ],
   "textos": [
     "🎮 *COMPLETE A FRASE*\n\n_\"Eu choro toda vez que toca ______ 😭\"_\n\nResponde reagindo com 😭 se você já chorou com Laufey hoje 👀",
@@ -44,6 +391,85 @@
     "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n👑✨🙏\n\nResposta: *Goddess*! 👑 Acertou? Reage com 💜",
     "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🤍🥀💔\n\nResposta: *Fragile*! 🥀 Acertou? Reage com 💜",
     "🎮 *SE VOCÊ PUDESSE PEDIR UMA MÚSICA NO SHOW...* 🎟️\n\nQual seria? Reage com:\n💘 From The Start\n🔮 Bewitched\n💃 Lover Girl\n🖤 Promise",
-    "🎮 *QUAL ERA VOCÊ ESTÁ VIVENDO?* 🎀\n\n💌 = Everything I Know About Love (apaixonado)\n🔮 = Bewitched (enfeitiçado)\n⏳ = A Matter of Time (só esperando o tempo passar)\n\nReage aí!"
+    "🎮 *QUAL ERA VOCÊ ESTÁ VIVENDO?* 🎀\n\n💌 = Everything I Know About Love (apaixonado)\n🔮 = Bewitched (enfeitiçado)\n⏳ = A Matter of Time (só esperando o tempo passar)\n\nReage aí!",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🌸🙅‍♀️🧠\n\nResposta: *Forget-Me-Not*! 🌸 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n☁️💭😴\n\nResposta: *Dreamer*! ☁️ Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n👻🏚️😱\n\nResposta: *Haunted*! 👻 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🤒💘🏥\n\nResposta: *Lovesick*! 🤒 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🌴🚗☀️\n\nResposta: *California and Me*! 🌴 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n✉️👧1️⃣3️⃣\n\nResposta: *Letter To My 13 Year Old Self*! ✉️ Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🏮🥡🏠\n\nResposta: *Above The Chinese Restaurant*! 🥡 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🎺🎷😎\n\nResposta: *Just Like Chet*! 🎺 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🌙💡🛏️\n\nResposta: *Night Light*! 🌙 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🐦🩰🎭\n\nResposta: *Cuckoo Ballet*! 🩰 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🤪👩⚡\n\nResposta: *Madwoman*! ⚡ Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🎩🌀🧑‍🎨\n\nResposta: *Mr. Eclectic*! 🎩 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n💥🔧😈\n\nResposta: *Sabotage*! 💥 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🍀✨🙌\n\nResposta: *Lucky for Me*! 🍀 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🌌❓🪐\n\nResposta: *Questions For The Universe*! 🌌 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🥈🏅😔\n\nResposta: *Second Best*! 🥈 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🤞💍🥺\n\nResposta: *Promise*! 🤞 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🌥️✨🥲\n\nResposta: *Silver Lining*! 🌥️ Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n💃👧💘\n\nResposta: *Lover Girl*! 💃 Acertou? Reage com 💜",
+    "🎮 *ADIVINHA A MÚSICA PELOS EMOJIS* 🧩\n\n🍀❌😩\n\nResposta: *Tough Luck*! 🍀 Acertou? Reage com 💜",
+    "🎮 *COMPLETE A FRASE*\n\n_\"A música da Laufey que mais me representa é ______\"_\n\nPensa aí e reage com 💜 quando tiver a resposta na cabeça 🧠",
+    "🎮 *COMPLETE A FRASE*\n\n_\"Se a Laufey cantasse no meu aniversário, eu pediria ______ 🎂\"_\n\nReage com 🎂 se você já sabe qual seria!",
+    "🎮 *COMPLETE A FRASE*\n\n_\"Eu conheci a Laufey por causa de ______\"_\n\n📱 = TikTok\n🎧 = Spotify/playlist\n👫 = um amigo\n📺 = YouTube\n\nReage aí!",
+    "🎮 *COMPLETE A FRASE*\n\n_\"A primeira música da Laufey que eu ouvi foi ______\"_\n\n💘 = From The Start\n💌 = Valentine\n🤍 = Fragile\n💃 = Lover Girl\n🎶 = outra",
+    "🎮 *QUAL MÚSICA VOCÊ É PELA COR FAVORITA?* 🎨\n\n💜 Roxo: Bewitched\n💙 Azul: Fragile\n💚 Verde: Clean Air\n💛 Amarelo: California and Me\n🧡 Laranja: Lover Girl\n❤️ Vermelho: Valentine\n🖤 Preto: Haunted\n🤍 Branco: Snow White\n🩷 Rosa: From The Start\n\nCombinou? Reage com a sua cor!",
+    "🎮 *QUAL MÚSICA VOCÊ É PELA BEBIDA FAVORITA?* ☕\n\n☕ Café: Clockwork\n🍵 Chá: Dreamer\n🍫 Chocolate quente: Love to Keep Me Warm\n🧃 Suco: Lover Girl\n🥤 Refri: Mr. Eclectic\n💧 Água: Clean Air\n\nReage com a sua bebida!",
+    "🎮 *QUAL MÚSICA VOCÊ É PELA HORA QUE ACORDA?* ⏰\n\n🌅 Antes das 6h: Clockwork\n☀️ 6h às 8h: Dreamer\n🌤️ 8h às 10h: California and Me\n😴 Depois das 10h: While You Were Sleeping\n\nReage aí!",
+    "🎮 *QUAL MÚSICA VOCÊ É PELA PRIMEIRA LETRA DO SEU NOME?* 🔤\n\nA–E: Valentine\nF–J: Fragile\nK–O: Lovesick\nP–T: Promise\nU–Z: Snow White\n\nReage com 💜 se combinou!",
+    "🎮 *QUAL MÚSICA VOCÊ É PELO SEU ESTADO CIVIL?* 💍\n\n💔 Solteiro sofrendo: Falling Behind\n😎 Solteiro feliz: Lover Girl\n💘 Com crush: From The Start\n💑 Namorando: Must Be Love\n🤷 É complicado: Sabotage\n\nReage aí (sem julgamentos 😂)",
+    "🎮 *QUAL MÚSICA VOCÊ É PELO SEU PET?* 🐾\n\n🐶 Cachorro: Best Friend\n🐱 Gato: Mr. Eclectic\n🐟 Peixe: Clean Air\n🐦 Pássaro: Cuckoo Ballet\n🚫 Não tenho pet: Falling Behind\n\nReage com o seu!",
+    "🎮 *QUAL MÚSICA VOCÊ É PELA ESTAÇÃO FAVORITA?* 🍂\n\n🌷 Primavera: Magnolia\n☀️ Verão: California and Me\n🍂 Outono: Seems Like Old Times\n❄️ Inverno: Winter Wonderland\n\nReage aí!",
+    "🎮 *QUAL MÚSICA VOCÊ É PELO DIA DA SEMANA QUE NASCEU?* 📅\n\nSeg: Tough Luck\nTer: Clockwork\nQua: Dreamer\nQui: Must Be Love\nSex: Lover Girl\nSáb: Dance With You Tonight\nDom: Night Light\n\nNão sabe? Pesquisa aí e volta 😂",
+    "🎮 *MONTE SEU SHOW DOS SONHOS* 🎟️\n\nEscolha a música de abertura:\n🎬 Clockwork\n☁️ Dreamer\n🤍 Fragile\n🚶 Street by Street\n\nReage com o emoji da sua escolha!",
+    "🎮 *MONTE SEU SHOW DOS SONHOS* 🎟️\n\nE a música pra fechar o show?\n🔮 Bewitched\n💘 From The Start\n👑 Goddess\n💥 Sabotage\n\nReage com o emoji da sua escolha!",
+    "🎮 *SE A LAUFEY FOSSE SUA PROFESSORA...* 🏫\n\n🎻 = aula de violoncelo\n🎹 = aula de piano\n🎤 = aula de canto\n📚 = aula de 'como sofrer com elegância'\n\nReage aí kkkk",
+    "🎮 *SE VOCÊ FOSSE PRA ISLÂNDIA COM A LAUFEY...* 🇮🇸\n\n🌋 = ver vulcão\n🌌 = ver aurora boreal\n♨️ = lagoa termal\n🎻 = só ficar ouvindo ela tocar\n\nReage aí!",
+    "🎮 *QUAL ITEM NÃO PODE FALTAR PRA OUVIR LAUFEY?* 🧺\n\n☕ = chá ou café\n🕯️ = vela acesa\n🌧️ = chuva lá fora\n🧶 = cobertor\n\nReage com o seu!",
+    "🎮 *DESAFIO DO DIA* 🎯\n\nOuve uma música da Laufey que você NUNCA ouviu antes e volta aqui reagindo com 🆕 quando terminar!",
+    "🎮 *DESAFIO DO DIA* 🎯\n\nManda uma música da Laufey pra alguém que nunca ouviu ela. Reage com 📤 quando mandar! Vamos espalhar a palavra 💜",
+    "🎮 *DESAFIO DO DIA* 🎯\n\nOuve um álbum da Laufey inteiro, do começo ao fim, sem pular. Reage com 💿 se você topa!",
+    "🎮 *DESAFIO DO DIA* 🎯\n\nCanta uma música da Laufey bem alto hoje (no banho vale). Reage com 🎤 depois que cumprir!",
+    "🎮 *DESAFIO DO DIA* 🎯\n\nTroca sua foto de perfil por um icon da Laufey por 24h 🖼️ Reage com 🔄 se você topa!",
+    "🎮 *DESAFIO DO DIA* 🎯\n\nOuve o *Typical of Me* inteiro hoje (são só 7 músicas, você consegue!) e reage com 🌱 depois",
+    "🎮 *DESAFIO DO DIA* 🎯\n\nFaz uma playlist com 5 músicas da Laufey pra alguém especial e reage com 🎁 quando terminar",
+    "🎮 *TERMÔMETRO DO SOFRIMENTO* 🌡️\n\nComo tá seu coração hoje?\n\n😄 = de boa, ouvindo Lover Girl\n🙂 = ok, ouvindo Dreamer\n🥲 = meio assim, ouvindo Falling Behind\n😭 = destruído, ouvindo Promise no repeat",
+    "🎮 *TERMÔMETRO DO VÍCIO* 🌡️\n\nQuantas músicas da Laufey você sabe cantar de cor?\n\n1️⃣ = 1 a 3\n🔟 = 4 a 10\n💯 = mais de 10\n🎤 = TODAS",
+    "🎮 *PERGUNTA SÉRIA* 🤔\n\nQual música da Laufey te ajudou num momento difícil?\n\nPensa nela agora e reage com 💜. Esse canal também é abraço 🫂",
+    "🎮 *PERGUNTA SÉRIA* 🤔\n\nSe você pudesse dizer uma frase pra Laufey, qual seria?\n\nPensa aí e reage com 💌 (quem sabe um dia ela lê 👀)",
+    "🎮 *PERGUNTA SÉRIA* 🤔\n\nQual música da Laufey você mostraria pra sua mãe?\n\n👩 = já mostrei\n🙈 = nunca, é muito pessoal\n🎶 = vou mostrar hoje!",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Tough Luck* está no álbum *A Matter of Time*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 10ª faixa do A Matter of Time 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Bewitched* está no álbum *A Matter of Time*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Bewitched* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Falling Behind* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 10ª faixa do Everything I Know About Love 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Second Best* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Bewitched* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Forget-Me-Not* está no álbum *A Matter of Time*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 9ª faixa do A Matter of Time 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Clockwork* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *A Matter of Time* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Dreamer* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 1ª faixa do Bewitched 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *I Wish You Love* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Typical of Me* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Street by Street* está no álbum *Typical of Me*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 1ª faixa do Typical of Me 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Everything I Know About Love* está no álbum *A Matter of Time*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Everything I Know About Love* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Serendipity* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 12ª faixa do Bewitched 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Silver Lining* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *A Matter of Time* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Just Like Chet* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 8ª faixa do Everything I Know About Love 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Clean Air* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *A Matter of Time* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Valentine* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 3ª faixa do Everything I Know About Love 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Misty* está no álbum *Typical of Me*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Bewitched* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Must Be Love* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 4ª faixa do Bewitched 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *From The Start* está no álbum *Typical of Me*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Bewitched* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Promise* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 9ª faixa do Bewitched 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *What Love Will Do to You* está no álbum *A Matter of Time*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Everything I Know About Love* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Haunted* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 3ª faixa do Bewitched 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Dear Soulmate* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Everything I Know About Love* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Fragile* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 1ª faixa do Everything I Know About Love 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Hi* está no álbum *Typical of Me*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Everything I Know About Love* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Beautiful Stranger* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 2ª faixa do Everything I Know About Love 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Above The Chinese Restaurant* está no álbum *Bewitched*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Everything I Know About Love* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Best Friend* está no álbum *Typical of Me*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 7ª faixa do Typical of Me 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *While You Were Sleeping* está no álbum *Typical of Me*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *Bewitched* 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Dance With You Tonight* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n✅ *VERDADE!* Ela é a 12ª faixa do Everything I Know About Love 🎶",
+    "🎮 *VERDADE OU MENTIRA?* 🤔\n\n_\"A música *Sabotage* está no álbum *Everything I Know About Love*.\"_\n\n✅ = verdade\n❌ = mentira\n\n(resposta lá embaixo, sem roubar! 👇)\n\n\n\n\n\n❌ *MENTIRA!* Ela é do *A Matter of Time* 🎶"
   ]
 }

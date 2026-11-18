@@ -1,32 +1,914 @@
 [
-  { "pergunta": "Qual a melhor música do *Bewitched*? 🔮", "opcoes": ["From The Start", "Promise", "Lovesick", "Must Be Love", "Second Best", "California and Me", "Letter To My 13 Year Old Self", "Bewitched"] },
-  { "pergunta": "Qual a melhor música do *Everything I Know About Love*? 💌", "opcoes": ["Fragile", "Valentine", "Falling Behind", "Beautiful Stranger", "Just Like Chet", "Above the Chinese Restaurant", "Dear Soulmate", "Everything I Know About Love"] },
-  { "pergunta": "Qual a melhor música do *A Matter of Time*? ⏳", "opcoes": ["Silver Lining", "Tough Luck", "Lover Girl", "Clean Air", "Snow White"] },
-  { "pergunta": "Qual o melhor álbum da Laufey? 💿", "opcoes": ["Typical of Me", "Everything I Know About Love", "Bewitched", "A Matter of Time"] },
-  { "pergunta": "Qual música você coloca pra chorar no banho? 🚿😭", "opcoes": ["Promise", "Fragile", "Letter To My 13 Year Old Self", "Falling Behind", "Second Best", "Silver Lining"] },
-  { "pergunta": "Qual música combina com se apaixonar? 💘", "opcoes": ["From The Start", "Valentine", "Must Be Love", "Lover Girl", "Beautiful Stranger", "Dreamer"] },
-  { "pergunta": "Qual música é você HOJE? 🪞", "opcoes": ["Lovesick (apaixonado e confuso)", "Tough Luck (cansado de tudo)", "Falling Behind (sozinho e ok)", "From The Start (crush secreto)", "Promise (sofrendo em silêncio)", "Bewitched (enfeitiçado)"] },
-  { "pergunta": "Qual era da Laufey é a sua favorita? 🎀", "opcoes": ["Typical of Me", "Everything I Know About Love", "Bewitched", "A Matter of Time"] },
-  { "pergunta": "Laufey no piano, no violão ou no violoncelo? 🎹🎸🎻", "opcoes": ["Piano 🎹", "Violão 🎸", "Violoncelo 🎻", "Só a voz já basta 🎤"] },
-  { "pergunta": "Qual dessas você mostraria pra alguém que nunca ouviu Laufey? 👂", "opcoes": ["From The Start", "Valentine", "Fragile", "Lover Girl", "Bewitched", "Like the Movies"] },
-  { "pergunta": "Melhor música pra estudar? 📚", "opcoes": ["Just Like Chet", "Dreamer", "While You Were Sleeping", "California and Me", "Clean Air"] },
-  { "pergunta": "Melhor música pra dias de chuva? 🌧️", "opcoes": ["Falling Behind", "Fragile", "Second Best", "Promise", "Haunted"] },
-  { "pergunta": "Qual música tem o melhor clipe? 🎬", "opcoes": ["From The Start", "Bewitched", "Silver Lining", "Lover Girl", "Valentine"] },
-  { "pergunta": "Se você pudesse ir num show da Laufey, qual música não pode faltar? 🎟️", "opcoes": ["From The Start", "Promise", "Valentine", "Fragile", "Silver Lining", "Bewitched"] },
-  { "pergunta": "Qual música descreve seu último crush? 🙈", "opcoes": ["Beautiful Stranger", "From The Start", "Second Best", "Must Be Love", "Lovesick", "Tough Luck"] },
-  { "pergunta": "Você é mais...? ☕", "opcoes": ["Chá 🍵", "Café ☕", "Chocolate quente 🍫", "Os três, sou intenso 😤"] },
-  { "pergunta": "Qual música tem a melhor ponte (bridge)? 🌉", "opcoes": ["Promise", "From The Start", "Fragile", "Silver Lining", "Letter To My 13 Year Old Self"] },
-  { "pergunta": "Que horas você mais ouve Laufey? 🕰️", "opcoes": ["De manhã ☀️", "À tarde 🌤️", "De noite 🌙", "3 da manhã sofrendo 🫠"] },
-  { "pergunta": "Melhor música pra dançar sozinho no quarto? 💃", "opcoes": ["From The Start", "Lover Girl", "Must Be Love", "Valentine", "Street by Street"] },
-  { "pergunta": "Qual música você mandaria pra sua versão de 13 anos? 🧒", "opcoes": ["Letter To My 13 Year Old Self", "Fragile", "Dreamer", "Silver Lining", "Everything I Know About Love"] },
-  { "pergunta": "Qual música te faz sentir num filme antigo? 🎞️", "opcoes": ["Like the Movies", "Bewitched", "California and Me", "Just Like Chet", "While You Were Sleeping"] },
-  { "pergunta": "Laufey mais triste ou mais fofa? 🥺", "opcoes": ["Triste, eu gosto de sofrer 😭", "Fofa, quero sorrir 🥰", "Os dois ao mesmo tempo 🫠"] },
-  { "pergunta": "Qual música você ouviria num encontro? 🌹", "opcoes": ["Valentine", "Must Be Love", "From The Start", "Lover Girl", "Beautiful Stranger"] },
-  { "pergunta": "Qual música é a mais subestimada? 💎", "opcoes": ["Above the Chinese Restaurant", "Dear Soulmate", "California and Me", "Haunted", "Clean Air", "Street by Street"] },
-  { "pergunta": "Qual dessas você já ouviu mais de 10x seguidas? 🔁", "opcoes": ["From The Start", "Promise", "Fragile", "Silver Lining", "Lovesick", "Todas, não tenho controle 😵‍💫"] },
-  { "pergunta": "Qual estação combina mais com a Laufey? 🍂", "opcoes": ["Outono 🍂", "Inverno ❄️", "Primavera 🌷", "Verão ☀️"] },
-  { "pergunta": "Qual música você cantaria no karaokê? 🎤", "opcoes": ["From The Start", "Valentine", "Lover Girl", "Bewitched", "Promise (e choraria no meio)"] },
-  { "pergunta": "Qual música resume sua semana? 📅", "opcoes": ["Tough Luck", "Falling Behind", "Silver Lining", "Lovesick", "Must Be Love"] },
-  { "pergunta": "De 0 a 10, quão viciado em Laufey você tá? 📈", "opcoes": ["0-3 (tô chegando agora)", "4-6 (já tô gostando)", "7-9 (ouço todo dia)", "10 (preciso de ajuda) 🆘"] },
-  { "pergunta": "Qual o melhor primeiro verso? ✍️", "opcoes": ["From The Start", "Promise", "Fragile", "Valentine", "Bewitched"] }
+  {
+    "pergunta": "Qual a melhor música do *Bewitched*? 🔮",
+    "opcoes": [
+      "From The Start",
+      "Promise",
+      "Lovesick",
+      "Must Be Love",
+      "Second Best",
+      "California and Me",
+      "Letter To My 13 Year Old Self",
+      "Bewitched"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor música do *Everything I Know About Love*? 💌",
+    "opcoes": [
+      "Fragile",
+      "Valentine",
+      "Falling Behind",
+      "Beautiful Stranger",
+      "Just Like Chet",
+      "Above the Chinese Restaurant",
+      "Dear Soulmate",
+      "Everything I Know About Love"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor música do *A Matter of Time*? ⏳",
+    "opcoes": [
+      "Silver Lining",
+      "Tough Luck",
+      "Lover Girl",
+      "Clean Air",
+      "Snow White"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor álbum da Laufey? 💿",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ]
+  },
+  {
+    "pergunta": "Qual música você coloca pra chorar no banho? 🚿😭",
+    "opcoes": [
+      "Promise",
+      "Fragile",
+      "Letter To My 13 Year Old Self",
+      "Falling Behind",
+      "Second Best",
+      "Silver Lining"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com se apaixonar? 💘",
+    "opcoes": [
+      "From The Start",
+      "Valentine",
+      "Must Be Love",
+      "Lover Girl",
+      "Beautiful Stranger",
+      "Dreamer"
+    ]
+  },
+  {
+    "pergunta": "Qual música é você HOJE? 🪞",
+    "opcoes": [
+      "Lovesick (apaixonado e confuso)",
+      "Tough Luck (cansado de tudo)",
+      "Falling Behind (sozinho e ok)",
+      "From The Start (crush secreto)",
+      "Promise (sofrendo em silêncio)",
+      "Bewitched (enfeitiçado)"
+    ]
+  },
+  {
+    "pergunta": "Qual era da Laufey é a sua favorita? 🎀",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ]
+  },
+  {
+    "pergunta": "Laufey no piano, no violão ou no violoncelo? 🎹🎸🎻",
+    "opcoes": [
+      "Piano 🎹",
+      "Violão 🎸",
+      "Violoncelo 🎻",
+      "Só a voz já basta 🎤"
+    ]
+  },
+  {
+    "pergunta": "Qual dessas você mostraria pra alguém que nunca ouviu Laufey? 👂",
+    "opcoes": [
+      "From The Start",
+      "Valentine",
+      "Fragile",
+      "Lover Girl",
+      "Bewitched",
+      "Like the Movies"
+    ]
+  },
+  {
+    "pergunta": "Melhor música pra estudar? 📚",
+    "opcoes": [
+      "Just Like Chet",
+      "Dreamer",
+      "While You Were Sleeping",
+      "California and Me",
+      "Clean Air"
+    ]
+  },
+  {
+    "pergunta": "Melhor música pra dias de chuva? 🌧️",
+    "opcoes": [
+      "Falling Behind",
+      "Fragile",
+      "Second Best",
+      "Promise",
+      "Haunted"
+    ]
+  },
+  {
+    "pergunta": "Qual música tem o melhor clipe? 🎬",
+    "opcoes": [
+      "From The Start",
+      "Bewitched",
+      "Silver Lining",
+      "Lover Girl",
+      "Valentine"
+    ]
+  },
+  {
+    "pergunta": "Se você pudesse ir num show da Laufey, qual música não pode faltar? 🎟️",
+    "opcoes": [
+      "From The Start",
+      "Promise",
+      "Valentine",
+      "Fragile",
+      "Silver Lining",
+      "Bewitched"
+    ]
+  },
+  {
+    "pergunta": "Qual música descreve seu último crush? 🙈",
+    "opcoes": [
+      "Beautiful Stranger",
+      "From The Start",
+      "Second Best",
+      "Must Be Love",
+      "Lovesick",
+      "Tough Luck"
+    ]
+  },
+  {
+    "pergunta": "Você é mais...? ☕",
+    "opcoes": [
+      "Chá 🍵",
+      "Café ☕",
+      "Chocolate quente 🍫",
+      "Os três, sou intenso 😤"
+    ]
+  },
+  {
+    "pergunta": "Qual música tem a melhor ponte (bridge)? 🌉",
+    "opcoes": [
+      "Promise",
+      "From The Start",
+      "Fragile",
+      "Silver Lining",
+      "Letter To My 13 Year Old Self"
+    ]
+  },
+  {
+    "pergunta": "Que horas você mais ouve Laufey? 🕰️",
+    "opcoes": [
+      "De manhã ☀️",
+      "À tarde 🌤️",
+      "De noite 🌙",
+      "3 da manhã sofrendo 🫠"
+    ]
+  },
+  {
+    "pergunta": "Melhor música pra dançar sozinho no quarto? 💃",
+    "opcoes": [
+      "From The Start",
+      "Lover Girl",
+      "Must Be Love",
+      "Valentine",
+      "Street by Street"
+    ]
+  },
+  {
+    "pergunta": "Qual música você mandaria pra sua versão de 13 anos? 🧒",
+    "opcoes": [
+      "Letter To My 13 Year Old Self",
+      "Fragile",
+      "Dreamer",
+      "Silver Lining",
+      "Everything I Know About Love"
+    ]
+  },
+  {
+    "pergunta": "Qual música te faz sentir num filme antigo? 🎞️",
+    "opcoes": [
+      "Like the Movies",
+      "Bewitched",
+      "California and Me",
+      "Just Like Chet",
+      "While You Were Sleeping"
+    ]
+  },
+  {
+    "pergunta": "Laufey mais triste ou mais fofa? 🥺",
+    "opcoes": [
+      "Triste, eu gosto de sofrer 😭",
+      "Fofa, quero sorrir 🥰",
+      "Os dois ao mesmo tempo 🫠"
+    ]
+  },
+  {
+    "pergunta": "Qual música você ouviria num encontro? 🌹",
+    "opcoes": [
+      "Valentine",
+      "Must Be Love",
+      "From The Start",
+      "Lover Girl",
+      "Beautiful Stranger"
+    ]
+  },
+  {
+    "pergunta": "Qual música é a mais subestimada? 💎",
+    "opcoes": [
+      "Above the Chinese Restaurant",
+      "Dear Soulmate",
+      "California and Me",
+      "Haunted",
+      "Clean Air",
+      "Street by Street"
+    ]
+  },
+  {
+    "pergunta": "Qual dessas você já ouviu mais de 10x seguidas? 🔁",
+    "opcoes": [
+      "From The Start",
+      "Promise",
+      "Fragile",
+      "Silver Lining",
+      "Lovesick",
+      "Todas, não tenho controle 😵‍💫"
+    ]
+  },
+  {
+    "pergunta": "Qual estação combina mais com a Laufey? 🍂",
+    "opcoes": [
+      "Outono 🍂",
+      "Inverno ❄️",
+      "Primavera 🌷",
+      "Verão ☀️"
+    ]
+  },
+  {
+    "pergunta": "Qual música você cantaria no karaokê? 🎤",
+    "opcoes": [
+      "From The Start",
+      "Valentine",
+      "Lover Girl",
+      "Bewitched",
+      "Promise (e choraria no meio)"
+    ]
+  },
+  {
+    "pergunta": "Qual música resume sua semana? 📅",
+    "opcoes": [
+      "Tough Luck",
+      "Falling Behind",
+      "Silver Lining",
+      "Lovesick",
+      "Must Be Love"
+    ]
+  },
+  {
+    "pergunta": "De 0 a 10, quão viciado em Laufey você tá? 📈",
+    "opcoes": [
+      "0-3 (tô chegando agora)",
+      "4-6 (já tô gostando)",
+      "7-9 (ouço todo dia)",
+      "10 (preciso de ajuda) 🆘"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor primeiro verso? ✍️",
+    "opcoes": [
+      "From The Start",
+      "Promise",
+      "Fragile",
+      "Valentine",
+      "Bewitched"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor faixa de abertura de um álbum da Laufey? 🎬",
+    "opcoes": [
+      "Street by Street",
+      "Fragile",
+      "Dreamer",
+      "Clockwork"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor faixa de encerramento? 🎬",
+    "opcoes": [
+      "Best Friend",
+      "Night Light",
+      "Bewitched",
+      "Sabotage"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor música de Natal da Laufey? 🎄",
+    "opcoes": [
+      "Santa Baby",
+      "Winter Wonderland",
+      "Christmas Magic",
+      "Love to Keep Me Warm",
+      "The Christmas Waltz",
+      "Christmas Dreaming"
+    ]
+  },
+  {
+    "pergunta": "Qual música nova do The Final Hour é a melhor? ⌛",
+    "opcoes": [
+      "Seems Like Old Times",
+      "Madwoman",
+      "How I Get",
+      "I Wait, I Wait, I Wait",
+      "I'll Forget About You (In Time)"
+    ]
+  },
+  {
+    "pergunta": "Qual faixa bônus da Goddess Edition é a melhor? 👑",
+    "opcoes": [
+      "Bored",
+      "Trouble",
+      "It Could Happen To You",
+      "Goddess"
+    ]
+  },
+  {
+    "pergunta": "Qual música do Typical of Me é a melhor? 💿",
+    "opcoes": [
+      "Street by Street",
+      "Magnolia",
+      "Like the Movies",
+      "I Wish You Love",
+      "James",
+      "Someone New",
+      "Best Friend"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com uma viagem de carro? 🚗",
+    "opcoes": [
+      "California and Me",
+      "Lover Girl",
+      "Street by Street",
+      "Carousel",
+      "Dreamer"
+    ]
+  },
+  {
+    "pergunta": "Qual música você mandaria pro seu crush sem dizer nada? 💌",
+    "opcoes": [
+      "From The Start",
+      "Valentine",
+      "How I Get",
+      "Must Be Love",
+      "Beautiful Stranger"
+    ]
+  },
+  {
+    "pergunta": "Qual música você mandaria pro seu ex? 💔",
+    "opcoes": [
+      "Tough Luck",
+      "Too Little, Too Late",
+      "I'll Forget About You (In Time)",
+      "Sabotage",
+      "Nenhuma, não merece 💅"
+    ]
+  },
+  {
+    "pergunta": "Qual música você ouve quando tá de bom humor? 😄",
+    "opcoes": [
+      "Lover Girl",
+      "From The Start",
+      "Mr. Eclectic",
+      "Dance With You Tonight",
+      "Must Be Love"
+    ]
+  },
+  {
+    "pergunta": "Qual música você ouve quando tá de mau humor? 😤",
+    "opcoes": [
+      "Tough Luck",
+      "Sabotage",
+      "Madwoman",
+      "Bored",
+      "Trouble"
+    ]
+  },
+  {
+    "pergunta": "Qual dessas é a mais 'filme de época'? 🎞️",
+    "opcoes": [
+      "Bewitched",
+      "Castle in Hollywood",
+      "The Christmas Waltz",
+      "Misty",
+      "Like the Movies"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor interlúdio? 🎹",
+    "opcoes": [
+      "Nocturne (Interlude)",
+      "Cuckoo Ballet (Interlude)",
+      "Os dois, não sei escolher"
+    ]
+  },
+  {
+    "pergunta": "Qual música tem o refrão mais grudento? 🎶",
+    "opcoes": [
+      "From The Start",
+      "Lover Girl",
+      "Valentine",
+      "Tough Luck",
+      "Must Be Love",
+      "Silver Lining"
+    ]
+  },
+  {
+    "pergunta": "Qual música é a mais 'chorei no ônibus'? 🚌😭",
+    "opcoes": [
+      "Letter To My 13 Year Old Self",
+      "Promise",
+      "Fragile",
+      "A Cautionary Tale",
+      "Forget-Me-Not"
+    ]
+  },
+  {
+    "pergunta": "Com qual música você acordaria todo dia? ⏰",
+    "opcoes": [
+      "Clockwork",
+      "Dreamer",
+      "California and Me",
+      "Clean Air",
+      "Street by Street"
+    ]
+  },
+  {
+    "pergunta": "Qual música você colocaria pra dormir? 😴",
+    "opcoes": [
+      "While You Were Sleeping",
+      "Night Light",
+      "Nocturne (Interlude)",
+      "Dreamer",
+      "Slow Down"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com um café da manhã com o crush? 🥐",
+    "opcoes": [
+      "Must Be Love",
+      "From The Start",
+      "Above The Chinese Restaurant",
+      "Lover Girl"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com um término? 🥀",
+    "opcoes": [
+      "Falling Behind",
+      "Let You Break My Heart Again",
+      "Too Little, Too Late",
+      "Second Best",
+      "Love Flew Away"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com a primavera? 🌷",
+    "opcoes": [
+      "Magnolia",
+      "Forget-Me-Not",
+      "Lover Girl",
+      "Clean Air",
+      "Valentine"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com o inverno? ❄️",
+    "opcoes": [
+      "Winter Wonderland",
+      "Snow White",
+      "Love to Keep Me Warm",
+      "Fragile",
+      "Haunted"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com o outono? 🍂",
+    "opcoes": [
+      "Falling Behind",
+      "Dreamer",
+      "Seems Like Old Times",
+      "Promise",
+      "Carousel"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com o verão? ☀️",
+    "opcoes": [
+      "California and Me",
+      "Lover Girl",
+      "Mr. Eclectic",
+      "Dance With You Tonight"
+    ]
+  },
+  {
+    "pergunta": "Qual título de música é o mais bonito? ✨",
+    "opcoes": [
+      "Serendipity",
+      "Forget-Me-Not",
+      "Questions For The Universe",
+      "Above The Chinese Restaurant",
+      "Letter To My 13 Year Old Self"
+    ]
+  },
+  {
+    "pergunta": "Qual capa de álbum é a mais bonita? 🖼️",
+    "opcoes": [
+      "Typical of Me",
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time"
+    ]
+  },
+  {
+    "pergunta": "Qual era você gostaria de ter vivido ao vivo? 🎟️",
+    "opcoes": [
+      "Everything I Know About Love",
+      "Bewitched",
+      "A Matter of Time",
+      "A Night At The Symphony"
+    ]
+  },
+  {
+    "pergunta": "Laufey ao vivo com orquestra ou em estúdio? 🎻",
+    "opcoes": [
+      "Ao vivo com orquestra 🎻",
+      "Versão de estúdio 🎧",
+      "As duas, sou fã completo"
+    ]
+  },
+  {
+    "pergunta": "Qual música você tem vergonha de dizer que ouve no repeat? 🙈",
+    "opcoes": [
+      "Santa Baby (fora do Natal)",
+      "Lover Girl",
+      "Mr. Eclectic",
+      "From The Start (pela 500ª vez)"
+    ]
+  },
+  {
+    "pergunta": "Qual dessas você mais canta no chuveiro? 🚿",
+    "opcoes": [
+      "From The Start",
+      "Valentine",
+      "Promise",
+      "Lover Girl",
+      "Bewitched"
+    ]
+  },
+  {
+    "pergunta": "Quantas vezes você ouve Laufey por dia? 🔢",
+    "opcoes": [
+      "1 a 5",
+      "6 a 20",
+      "21 a 50",
+      "Eu não paro, socorro 🆘"
+    ]
+  },
+  {
+    "pergunta": "Qual música é mais 'diário secreto'? 📓",
+    "opcoes": [
+      "Letter To My 13 Year Old Self",
+      "Dear Soulmate",
+      "Questions For The Universe",
+      "Hi",
+      "James"
+    ]
+  },
+  {
+    "pergunta": "Qual música da era A Matter of Time é a mais triste? ⏳😢",
+    "opcoes": [
+      "Forget-Me-Not",
+      "A Cautionary Tale",
+      "Too Little, Too Late",
+      "Silver Lining",
+      "Sabotage"
+    ]
+  },
+  {
+    "pergunta": "Qual música do Bewitched é a mais triste? 🔮😢",
+    "opcoes": [
+      "Promise",
+      "Second Best",
+      "Letter To My 13 Year Old Self",
+      "Haunted",
+      "Serendipity"
+    ]
+  },
+  {
+    "pergunta": "Qual música do Everything I Know About Love é a mais triste? 💌😢",
+    "opcoes": [
+      "Fragile",
+      "Falling Behind",
+      "Dear Soulmate",
+      "What Love Will Do to You",
+      "Night Light"
+    ]
+  },
+  {
+    "pergunta": "Qual dessas versões ao vivo é a melhor? 🎤",
+    "opcoes": [
+      "Promise (Hollywood Bowl)",
+      "Goddess (Hollywood Bowl)",
+      "Valentine (Live at The Symphony)",
+      "Fragile (Reykjavík Sessions)"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina mais com a Islândia? 🇮🇸",
+    "opcoes": [
+      "Fragile",
+      "Snow White",
+      "Haunted",
+      "Night Light",
+      "Street by Street"
+    ]
+  },
+  {
+    "pergunta": "Se a Laufey fizesse um filme, qual seria a trilha principal? 🎬",
+    "opcoes": [
+      "Bewitched",
+      "Castle in Hollywood",
+      "From The Start",
+      "Like the Movies",
+      "Carousel"
+    ]
+  },
+  {
+    "pergunta": "Qual música você usaria no seu casamento? 💍",
+    "opcoes": [
+      "Must Be Love",
+      "From The Start",
+      "Valentine",
+      "Dear Soulmate",
+      "Lucky for Me"
+    ]
+  },
+  {
+    "pergunta": "Qual música você usaria no story? 📱",
+    "opcoes": [
+      "Lover Girl",
+      "From The Start",
+      "Silver Lining",
+      "Mr. Eclectic",
+      "Goddess"
+    ]
+  },
+  {
+    "pergunta": "Qual música é a mais 'personagem principal'? 🌟",
+    "opcoes": [
+      "Goddess",
+      "Lover Girl",
+      "Bewitched",
+      "Castle in Hollywood",
+      "Madwoman"
+    ]
+  },
+  {
+    "pergunta": "Qual música você ouviria numa biblioteca? 📚",
+    "opcoes": [
+      "Just Like Chet",
+      "Nocturne (Interlude)",
+      "Night Light",
+      "Misty",
+      "Clean Air"
+    ]
+  },
+  {
+    "pergunta": "Qual dessas você ainda não ouviu? 👀",
+    "opcoes": [
+      "Magnolia",
+      "Night Light",
+      "Serendipity",
+      "Cuckoo Ballet (Interlude)",
+      "Já ouvi todas 😎"
+    ]
+  },
+  {
+    "pergunta": "Qual música você queria que tivesse clipe? 🎬",
+    "opcoes": [
+      "Haunted",
+      "Carousel",
+      "Night Light",
+      "Serendipity",
+      "Forget-Me-Not"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com um piquenique? 🧺",
+    "opcoes": [
+      "Magnolia",
+      "Lover Girl",
+      "Must Be Love",
+      "Clean Air",
+      "Dreamer"
+    ]
+  },
+  {
+    "pergunta": "Qual música combina com um baile de época? 💃",
+    "opcoes": [
+      "The Christmas Waltz",
+      "Bewitched",
+      "Cuckoo Ballet (Interlude)",
+      "Valentine",
+      "Castle in Hollywood"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *Everything I Know About Love*? (parte 1/3) 🎶",
+    "opcoes": [
+      "Fragile",
+      "Beautiful Stranger",
+      "Valentine",
+      "Above The Chinese Restaurant",
+      "Dear Soulmate"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *Everything I Know About Love*? (parte 2/3) 🎶",
+    "opcoes": [
+      "What Love Will Do to You",
+      "I've Never Been In Love Before",
+      "Just Like Chet",
+      "Everything I Know About Love",
+      "Falling Behind"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *Everything I Know About Love*? (parte 3/3) 🎶",
+    "opcoes": [
+      "Hi",
+      "Dance With You Tonight",
+      "Night Light"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *Bewitched*? (parte 1/3) 🎶",
+    "opcoes": [
+      "Dreamer",
+      "Second Best",
+      "Haunted",
+      "Must Be Love",
+      "While You Were Sleeping"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *Bewitched*? (parte 2/3) 🎶",
+    "opcoes": [
+      "Lovesick",
+      "California and Me",
+      "Promise",
+      "From The Start",
+      "Misty"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *Bewitched*? (parte 3/3) 🎶",
+    "opcoes": [
+      "Serendipity",
+      "Letter To My 13 Year Old Self",
+      "Bewitched"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *A Matter of Time*? (parte 1/3) 🎶",
+    "opcoes": [
+      "Clockwork",
+      "Lover Girl",
+      "Snow White",
+      "Castle in Hollywood",
+      "Carousel"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *A Matter of Time*? (parte 2/3) 🎶",
+    "opcoes": [
+      "Silver Lining",
+      "Too Little, Too Late",
+      "Forget-Me-Not",
+      "Tough Luck",
+      "A Cautionary Tale"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor do *A Matter of Time*? (parte 3/3) 🎶",
+    "opcoes": [
+      "Mr. Eclectic",
+      "Clean Air",
+      "Sabotage"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor versão ao vivo do Hollywood Bowl? (parte 1/3) 🎻",
+    "opcoes": [
+      "Dreamer",
+      "While You Were Sleeping",
+      "Falling Behind",
+      "Fragile",
+      "Let You Break My Heart Again"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor versão ao vivo do Hollywood Bowl? (parte 2/3) 🎻",
+    "opcoes": [
+      "Valentine",
+      "I Wish You Love",
+      "Promise",
+      "California and Me",
+      "Goddess"
+    ]
+  },
+  {
+    "pergunta": "Qual a melhor versão ao vivo do Hollywood Bowl? (parte 3/3) 🎻",
+    "opcoes": [
+      "It Could Happen To You",
+      "Bored",
+      "Lovesick",
+      "Bewitched",
+      "From The Start"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor single de *2020*? 📅",
+    "opcoes": [
+      "Someone New",
+      "Street by Street"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor single de *2021*? 📅",
+    "opcoes": [
+      "Love to Keep Me Warm",
+      "Love Flew Away",
+      "Let You Break My Heart Again"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor single de *2022*? 📅",
+    "opcoes": [
+      "Ain't Christmas",
+      "Falling Behind",
+      "Dear Soulmate",
+      "Everything I Know About Love",
+      "Valentine"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor single de *2023*? 📅",
+    "opcoes": [
+      "Winter Wonderland",
+      "Christmas With You",
+      "A Night To Remember",
+      "California and Me",
+      "Bewitched",
+      "Promise",
+      "From The Start"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor single de *2024*? 📅",
+    "opcoes": [
+      "Where or When",
+      "Goddess"
+    ]
+  },
+  {
+    "pergunta": "Qual o melhor single de *2025*? 📅",
+    "opcoes": [
+      "Snow White",
+      "Lover Girl",
+      "Tough Luck",
+      "Silver Lining"
+    ]
+  }
 ]
