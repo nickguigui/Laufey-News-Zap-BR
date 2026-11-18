@@ -166,7 +166,7 @@ async function baixar(url) {
 async function enviar(sock, jid, m) {
   if (m.poll) {
     try {
-      await sock.sendMessage(jid, { poll: { name: m.poll.name.slice(0, 250), values: m.poll.values, selectableCount: 1 } });
+      await sock.sendMessage(jid, { poll: { name: m.poll.name.replace(/[*_]/g, '').slice(0, 250), values: m.poll.values, selectableCount: 1 } });
       return;
     } catch (e) { console.warn(`⚠️  Enquete nativa falhou (${e.message}), enviando em texto.`); }
   }
