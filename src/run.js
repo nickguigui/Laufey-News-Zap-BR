@@ -9,6 +9,7 @@ import { agoraBR, hm, diaAnterior, seedDoDia } from './schedule.js';
 import * as F from './format.js';
 import { escolherMusica, legendaMusica, cardMusica } from './music.js';
 import { unpackDir, packDir } from './crypto.js';
+import { enviarCanal } from './canal.js';
 
 const DRY = process.argv.includes('--dry') || process.env.DRY_RUN === '1';
 const FORCE = process.env.FORCE || '';
@@ -166,7 +167,7 @@ async function baixar(url) {
 async function enviar(sock, jid, m) {
   if (m.poll) {
     try {
-      await sock.sendMessage(jid, { poll: { name: m.poll.name.replace(/[*_]/g, '').slice(0, 250), values: m.poll.values, selectableCount: 1 } });
+      await enviarCanal(sock, jid, { poll: { name: m.poll.name.replace(/[*_]/g, '').slice(0, 250), values: m.poll.values, selectableCount: 1 } });
       return;
     } catch (e) { console.warn(`⚠️  Enquete nativa falhou (${e.message}), enviando em texto.`); }
   }
@@ -177,14 +178,14 @@ async function enviar(sock, jid, m) {
   } catch (e) { console.warn(`⚠️  Não consegui baixar a imagem (${e.message}).`); }
   let foi = false;
   if (img) {
-    try { await sock.sendMessage(jid, { image: img, caption: m.texto }); foi = true; }
+    try { await enviarCanal(sock, jid, { image: img, caption: m.texto }); foi = true; }
     catch (e) { console.warn(`⚠️  Envio com imagem falhou (${e.message}), mandando só texto.`); }
   }
-  if (!foi) await sock.sendMessage(jid, { text: m.texto });
+  if (!foi) await enviarCanal(sock, jid, { text: m.texto });
   if (m.audioUrl) {
     try {
       await sleep(3000);
-      await sock.sendMessage(jid, { audio: await baixar(m.audioUrl), mimetype: 'audio/mpeg' });
+      await enviarCanal(sock, jid, { audio: await baixar(m.audioUrl), mimetype: 'audio/mpeg', seconds: 30 });
     } catch (e) { console.warn(`⚠️  Prévia em áudio falhou (${e.message}).`); }
   }
 }
