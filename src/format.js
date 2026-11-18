@@ -149,7 +149,19 @@ _De novo e todo dia, meu amor 😌 Mas amanhã às 6:00 ele vira CANAL ON outra 
 export function canalOn(seed) { return pick(CANAL_ON, seed); }
 export function canalOff(seed) { return pick(CANAL_OFF, seed); }
 
+// ───────── Formatação do WhatsApp ─────────
+// _*título*_  → negrito + itálico        _texto_  → itálico
+// *texto*     → negrito                  ~texto~  → riscado
+// `texto`     → código (fala/destaque)   > texto  → citação
+// - item      → lista
+// Formatação só funciona dentro de UMA linha, então cada parágrafo é formatado separado.
+
 const TIPO_LANCAMENTO = { single: 'um single novo', album: 'um álbum novo', ep: 'um EP novo', compile: 'uma coletânea nova' };
+
+/** Remove caracteres que quebrariam a formatação (títulos vindos de fora). */
+const limpo = (t) => String(t ?? '').replace(/[*_~`]/g, ' ').replace(/\s+/g, ' ').trim();
+const titulo = (t) => `_*${t}*_`;
+const ital = (t) => `_${t}_`;
 
 function dataBR(d) {
   const ymd = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(d));
@@ -159,71 +171,104 @@ function dataBR(d) {
 }
 
 export function formatarItem(item) {
+  const t = limpo(item.titulo);
   switch (item.tipo) {
     case 'youtube':
       return item.shorts
-        ? `💜 *SHORTS NOVO DA LAUFEY!* 📱✨\n\n_${item.titulo}_\n\nCorre ver que é rapidinho 🏃‍♀️💨\n▶️ ${item.link}`
-        : `💜 *VÍDEO NOVO DA LAUFEY!* 🎬🎻\n\n_${item.titulo}_\n\nDá o play e já volta aqui pra comentar 👀\n▶️ ${item.link}`;
+        ? `${titulo('SHORTS NOVO DA LAUFEY‼️ 📱✨')}\n\n💜- ${ital('Corre ver que é rapidinho 🏃‍♀️💨')}\n\n> *${t}*\n\n▶️ ${item.link}`
+        : `${titulo('VÍDEO NOVO DA LAUFEY‼️ 🎬🎻')}\n\n💜- ${ital('Dá o play e já volta aqui pra comentar 👀')}\n\n> *${t}*\n\n▶️ ${item.link}`;
     case 'youtube_outros':
-      return `💜 *LAUFEY POR AÍ* 📺✨\n\n_${item.titulo}_\n📡 Canal: ${item.canal}\n\nEntrevista, show ou apresentação nova, corre ver 🏃‍♀️\n▶️ ${item.link}`;
-    case 'lancamento':
-      if (item.futuro) return `💜 *VEM AÍ!* 📣💿\n\nA Laufey vai lançar ${TIPO_LANCAMENTO[item.formato] || 'música nova'}:\n*${item.titulo}*\n📅 Sai em ${dataBR(item.data)}\n\nJá pode ir preparando o coração 🫀\n🎧 ${item.link}`;
-      return `💜 *LANÇAMENTO NOVO!* 💿🎶\n\nA Laufey acabou de soltar ${TIPO_LANCAMENTO[item.formato] || 'música nova'}:\n*${item.titulo}*\n📅 ${dataBR(item.data)}\n\nJá pode chorar/dançar/surtar 😭💃\n🎧 ${item.link}`;
+      return `${titulo('LAUFEY POR AÍ 📺✨')}\n\n💜- ${ital('Entrevista, show ou apresentação nova na área!')}\n\n> *${t}*\n\n- 📡 Canal: \`${limpo(item.canal)}\`\n- ▶️ ${item.link}`;
+    case 'lancamento': {
+      const oque = TIPO_LANCAMENTO[item.formato] || 'música nova';
+      if (item.futuro) {
+        return `${titulo('VEM AÍ‼️ 📣💿')}\n\n💜- ${ital(`A Laufey vai lançar ${oque}:`)}\n\n> *${t}*\n\n- 📅 Sai em: \`${dataBR(item.data)}\`\n- 🎧 ${item.link}\n\n${ital('Já pode ir preparando o coração 🫀')}`;
+      }
+      return `${titulo('LANÇAMENTO NOVO‼️ 💿🎶')}\n\n💜- ${ital(`A Laufey acabou de soltar ${oque}:`)}\n\n> *${t}*\n\n- 📅 \`${dataBR(item.data)}\`\n- 🎧 ${item.link}\n\n${ital('Já pode chorar, dançar e surtar (nessa ordem) 😭💃')}`;
+    }
     case 'noticia':
-      return `💜 *NOTÍCIA DO DIA* 📰☕\n\n*${item.titulo}*${item.fonte ? `\n🗞️ Fonte: ${item.fonte}` : ''}\n\n🔗 ${item.link}`;
+      return `${titulo('NOTÍCIA DO DIA 📰☕')}\n\n💜- ${ital('Saiu agora, fresquinha:')}\n\n> *${t}*\n\n${item.fonte ? `- 🗞️ Fonte: \`${limpo(item.fonte)}\`\n` : ''}- 🔗 ${item.link}`;
     case 'reddit':
-      return `💜 *DIRETO DO r/laufey* 💬\n\n_${item.titulo}_${item.score ? `\n⬆️ ${item.score} votos` : ''}\n\n🔗 ${item.link}`;
+      return `${titulo('DIRETO DO r/laufey 💬')}\n\n💜- ${ital('Os fãs tão comentando isso aqui:')}\n\n> *${t}*\n\n${item.score ? `- ⬆️ \`${item.score} votos\`\n` : ''}- 🔗 ${item.link}`;
     default:
-      return `💜 ${item.titulo}\n${item.link || ''}`;
+      return `💜- *${t}*\n${item.link || ''}`;
   }
 }
 
-export const ICON_LEGENDAS = [
-  `💜 *ICON LIBERADO!* 🖼️✨\n\n_Pode salvar e usar à vontade! Só não esquece de dar os créditos pro canal, tá? 😌🎀_`,
-  `💜 *ICON DO DIA!* 🖼️🎻\n\n_Esse aqui tá a sua cara, confessa 👀 Salva antes que alguém roube! 💕_`,
-  `💜 *ICON LIBERADO!* 🌷\n\n_Troca a foto de perfil agora e manda print pra gente (mentira, não manda, mas usa 😂)_`,
-  `💜 *ICON NOVO NA ÁREA!* 🖼️💫\n\n_Quem pegar primeiro é o fã número 1 (regra que eu acabei de inventar) 😌_`,
-  `💜 *ICON LIBERADO!* 🎀\n\n_Esse aqui combina com um perfil que só ouve Laufey e chora em silêncio. Ou seja: todo mundo aqui 🥲_`,
-  `💜 *ICON DO DIA!* ☕\n\n_Salva, coloca de perfil e espera o crush perguntar 'quem é?' 😏 Aí você manda From The Start_`,
-  `💜 *ICON LIBERADO!* 🌙\n\n_Pra quem quer um perfil bonito e misterioso, tipo música de jazz às 2 da manhã 🎷_`,
-  `💜 *ICON FRESQUINHO!* 🖼️🍵\n\n_Acabou de sair do forno. Pode pegar, é de graça, igual o amor que a gente sente por ela 💜_`,
-  `💜 *ICON LIBERADO!* 🎻\n\n_Usa, abusa e se alguém perguntar de onde é, fala que é do canal mais fofo do WhatsApp 😌✨_`,
-  `💜 *ICON DO DIA!* 🌷\n\n_Esse é pra deixar o perfil com cheirinho de chá e livro antigo 📖☕_`,
-];
-
-export function enqueteTexto(e) {
-  // fallback em texto, caso a enquete nativa falhe
-  const nums = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟', '#️⃣', '*️⃣'];
-  return `💜 *ENQUETE DO DIA* 🗳️\n\n*${e.pergunta}*\n\n${e.opcoes.map((o, i) => `${nums[i]} ${o}`).join('\n')}\n\n_Reage com o número da sua escolha!_ 👇`;
+/** Converte "💜 *TÍTULO* emojis\n\n_corpo_" no padrão do canal. */
+function padraoCanal(txt) {
+  return txt.replace(/^💜 \*(.+?)\*\s*(.*?)\n\n/, (_, a, b) => `${titulo(`${a}${b ? ' ' + b : ''}`)}\n\n💜- `);
 }
 
+const ICONES = [
+  `💜 *ICON LIBERADO!* 🖼️✨\n\n_Pode salvar e usar à vontade! Só não esquece de dar os créditos pro canal, tá? 😌🎀_`,
+  `💜 *ICON DO DIA!* 🖼️🎻\n\n_Esse aqui tá a sua cara, confessa 👀 Salva antes que alguém roube! 💕_`,
+  `💜 *ICON LIBERADO!* 🌷\n\n_Troca a foto de perfil agora e manda print pra gente_ ~mentira, não manda~ _mas usa 😂_`,
+  `💜 *ICON NOVO NA ÁREA!* 🖼️💫\n\n_Quem pegar primeiro é o fã número 1_ \`(regra que eu acabei de inventar)\` 😌`,
+  `💜 *ICON LIBERADO!* 🎀\n\n_Esse aqui combina com um perfil que só ouve Laufey e chora em silêncio. Ou seja: todo mundo aqui 🥲_`,
+  `💜 *ICON DO DIA!* ☕\n\n_Salva, coloca de perfil e espera o crush perguntar_ \`"quem é?"\` 😏 _Aí você manda From The Start_`,
+  `💜 *ICON LIBERADO!* 🌙\n\n_Pra quem quer um perfil bonito e misterioso, tipo música de jazz às 2 da manhã 🎷_`,
+  `💜 *ICON FRESQUINHO!* 🖼️🍵\n\n_Acabou de sair do forno. Pode pegar, é de graça, igual o amor que a gente sente por ela 💜_`,
+  `💜 *ICON LIBERADO!* 🎻\n\n_Usa, abusa e se alguém perguntar de onde é, fala que é do_ *canal mais fofo do WhatsApp* 😌✨`,
+  `💜 *ICON DO DIA!* 🌷\n\n_Esse é pra deixar o perfil com cheirinho de chá e livro antigo 📖☕_`,
+];
+export const ICON_LEGENDAS = ICONES.map(padraoCanal);
+
+const NUMS = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟', '#️⃣', '*️⃣'];
+
+/** Texto de enquete (usado se a enquete nativa falhar). */
+export function enqueteTexto(e, cabecalho = 'ENQUETE DO DIA 🗳️') {
+  return `${titulo(cabecalho)}\n\n💜- ${e.pergunta}\n\n${e.opcoes.map((o, i) => `${NUMS[i]} ${ital(limpo(o))}`).join('\n')}\n\n> Reage com o número da sua escolha! 👇`;
+}
+
+/** "fala" — resposta  →  fala em `código`, resposta em itálico. */
 export function meCoreTexto(texto) {
-  return `💜 *ME CORE* 🖤\n\n${texto}`;
+  const m = /^"(.+?)"\s*—\s*(.+)$/s.exec(texto);
+  if (!m) return `${titulo('ME CORE 🖤')}\n\n💜- ${ital(texto)}`;
+  return `${titulo('ME CORE 🖤')}\n\n💜- \`"${m[1]}"\`\n\n${ital(m[2])}`;
 }
 
 export function curiosidadeTexto(texto) {
-  return `💜 *CURIOSIDADE DO DIA* 🧠✨\n\n${texto}\n\n_Você já sabia? Reage com 🤯 se não sabia!_`;
+  return `${titulo('CURIOSIDADE DO DIA 🧠✨')}\n\n💜- ${ital('Você sabia?')}\n\n> ${texto}\n\n${ital('Reage com 🤯 se você não sabia!')}`;
 }
 
 export function quizRespostaTexto(q) {
-  return `💜 *RESPOSTA DO QUIZ* ✅\n\n_${q.pergunta.replace(/[*_]/g, '')}_\n\nA resposta certa era: *${q.opcoes[q.correta]}* 🎉\n${q.explicacao}\n\nQuem acertou merece um chá ☕ Quem errou... merece dois 🍵🍵`;
+  return `${titulo('RESPOSTA DO QUIZ ✅')}\n\n💜- \`${limpo(q.pergunta)}\`\n\n> ✔️ Resposta certa: *${limpo(q.opcoes[q.correta])}* 🎉\n> ${q.explicacao}\n\n${ital('Quem acertou merece um chá ☕')}\n${ital('Quem errou merece')} ~dois~ *três* 🍵🍵🍵`;
 }
 
+const INTRO_JOGO = ['Hora do jogo, ouvintes! 🎮', 'Bora brincar um pouquinho? 🎲', 'Valendo... nada, mas valendo! 😂', 'Joguinho da noite chegando! 🌙', 'Atenção, participantes! 📣'];
+
+/** Jogos: título no padrão, opções em lista, frases soltas em itálico. */
 export function jogoTexto(texto) {
-  return `💜 ${texto}`;
+  const linhas = texto.split('\n');
+  const cab = linhas.shift().replace(/^🎮\s*\*(.+?)\*\s*(.*)$/, (_, a, b) => titulo(`🎮 ${a}${b ? ' ' + b : ''}`));
+  const corpo = linhas.map((l) => {
+    if (!l.trim()) return l;
+    if (/^Resposta/.test(l)) return `> ${l}`;                                         // revelação
+    if (/^_.*_$/.test(l) || /\*/.test(l)) return l;                                  // já formatada
+    if (!/\p{L}/u.test(l)) return l;                                                 // só emojis
+    if (l.includes(' = ')) return `- ${l.replace(/ = (.+)$/, ' = _$1_')}`;              // "😭 = Promise"
+    if (/^[^:]{1,18}: \S/.test(l) && !/^Escolhe/.test(l)) return `- ${l.replace(/: (.+)$/, ': _$1_')}`; // "Jan: Snow White"
+    if (/^\(.*\)$/.test(l)) return `> ${l.slice(1, -1)}`;                              // "(resposta: ...)"
+    return ital(l);
+  });
+  const intro = INTRO_JOGO[texto.length % INTRO_JOGO.length];
+  return [cab, '', `💜- ${ital(intro)}`, ...corpo].join('\n');
 }
 
 export function dataEspecialTexto(d, ano) {
   const anos = ano - d.ano;
+  const s = anos > 1 ? 's' : '';
   if (d.tipo === 'aniversario') {
-    return `💜 *HOJE É DIA DE FESTA!* 🎂🎉\n\nHoje a *Laufey* completa *${anos} anos*! 🥳🎻\n\nDeixa nos comentários... brincadeira, canal não tem comentário 😂 Reage com 🎂 pra mandar parabéns pra ela!\n\n_Feliz aniversário, Laufey! Obrigado por fazer a trilha sonora das nossas crises 💜_`;
+    return `${titulo('HOJE É DIA DE FESTA‼️ 🎂🎉')}\n\n💜- ${ital(`Hoje a Laufey completa`)} *${anos} anos*! 🥳🎻\n\n${ital('Deixa nos comentários...')} ~brincadeira, canal não tem comentário~ 😂\n> Reage com 🎂 pra mandar parabéns pra ela!\n\n${ital('Feliz aniversário, Laufey! Obrigado por fazer a trilha sonora das nossas crises 💜')}`;
   }
   if (d.tipo === 'grammy') {
-    return `💜 *HOJE NA HISTÓRIA* 🏆\n\nHá *${anos} ano${anos > 1 ? 's' : ''}*, a Laufey ganhava o *Grammy* de Melhor Álbum Vocal Pop Tradicional com *Bewitched*! ✨\n\nReage com 🏆 se você lembra onde estava nesse dia!`;
+    return `${titulo('HOJE NA HISTÓRIA 🏆')}\n\n💜- ${ital(`Há ${anos} ano${s}, a Laufey ganhava o`)} *Grammy* ${ital('de Melhor Álbum Vocal Pop Tradicional com')} *Bewitched*! ✨\n\n> Reage com 🏆 se você lembra onde estava nesse dia!`;
   }
-  return `💜 *HOJE NA HISTÓRIA* 📅💿\n\nHá *${anos} ano${anos > 1 ? 's' : ''}* saía *${d.titulo}*! 🎶\n\nQual a sua música favorita dele? Reage com 💜 se ele mudou sua vida!`;
+  return `${titulo('HOJE NA HISTÓRIA 📅💿')}\n\n💜- ${ital(`Há ${anos} ano${s} saía`)} *${d.titulo}*! 🎶\n\n> Qual a sua música favorita dele?\n\n${ital('Reage com 💜 se ele mudou sua vida!')}`;
 }
 
 export function contagemTexto(item, dias) {
-  return `💜 *CONTAGEM REGRESSIVA* ⏳\n\n${dias === 1 ? '*FALTA 1 DIA*' : `*FALTAM ${dias} DIAS*`} para *${item.titulo}*! 📣\n📅 ${dataBR(item.data)}\n\n${dias <= 3 ? 'Tá chegando!!! Prepara o fone e os lencinhos 🎧🤧' : 'Vai separando o chá e o coração ☕💜'}`;
+  const falta = dias === 1 ? 'FALTA 1 DIA' : `FALTAM ${dias} DIAS`;
+  return `${titulo(`CONTAGEM REGRESSIVA ⏳`)}\n\n💜- *${falta}* ${ital('para')} *${limpo(item.titulo)}*! 📣\n\n- 📅 \`${dataBR(item.data)}\`\n\n${ital(dias <= 3 ? 'Tá chegando!!! Prepara o fone e os lencinhos 🎧🤧' : 'Vai separando o chá e o coração ☕💜')}`;
 }

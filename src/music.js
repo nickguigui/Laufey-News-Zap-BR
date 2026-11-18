@@ -68,19 +68,20 @@ export async function escolherMusica(usadas, seed, mes) {
 
 export function legendaMusica(m) {
   const q = encodeURIComponent(`${m.titulo} ${m.artista}`);
-  return `💜 *MÚSICA DO DIA* 🎧
+  const limpo = (t) => String(t).replace(/[*_~`]/g, '');
+  return `_*MÚSICA DO DIA 🎧*_
 
-🎵 *${m.titulo}*
-👤 ${m.artista}
-💿 ${m.album}
+💜- _${m.comentario}_
 
-${m.comentario}
+> 🎵 *${limpo(m.titulo)}*
+> 👤 _${limpo(m.artista)}_
+> 💿 _${limpo(m.album)}_
 
-🟢 Spotify: https://open.spotify.com/search/${q}
-🎧 Deezer: ${m.deezer}
-📺 YouTube: https://www.youtube.com/results?search_query=${q}
+- 🟢 Spotify: https://open.spotify.com/search/${q}
+- 🎧 Deezer: ${m.deezer}
+- 📺 YouTube: https://www.youtube.com/results?search_query=${q}
 
-_Prévia de 30s aqui embaixo 👇_`;
+\`prévia de 30s aqui embaixo 👇\``;
 }
 
 function quebrar(texto, max) {

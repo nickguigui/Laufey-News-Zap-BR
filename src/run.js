@@ -94,7 +94,7 @@ const SLOTS = {
     const lista = lerJSON('jogos.json').issoOuAquilo;
     const i = sortear(lista.length, s.usados.isso, seedDoDia(dia) * 5);
     return {
-      texto: `💜 *ISSO OU AQUILO?* 🤔\n\n1️⃣ ${lista[i][0]}\n2️⃣ ${lista[i][1]}`,
+      texto: F.enqueteTexto({ pergunta: 'Qual você prefere?', opcoes: lista[i] }, 'ISSO OU AQUILO? 🤔'),
       poll: { name: '💜 ISSO OU AQUILO? 🤔', values: lista[i] },
       marcar: () => s.usados.isso.push(i),
     };
@@ -116,7 +116,7 @@ const SLOTS = {
     const i = sortear(lista.length, s.usados.quiz, seedDoDia(dia) * 17);
     const q = lista[i];
     return {
-      texto: F.enqueteTexto({ pergunta: `QUIZ 🧠 ${q.pergunta}`, opcoes: q.opcoes }),
+      texto: F.enqueteTexto({ pergunta: q.pergunta, opcoes: q.opcoes }, 'QUIZ 🧠'),
       poll: { name: `💜 QUIZ 🧠 ${q.pergunta} (resposta mais tarde!)`, values: q.opcoes },
       marcar: (d) => { s.usados.quiz.push(i); d.quizIndex = i; },
     };
