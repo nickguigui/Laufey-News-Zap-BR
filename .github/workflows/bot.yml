@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: 'Forçar um post de teste (on, off, poll, mecore, icon, news) — deixe vazio para execução normal'
+        description: 'Forçar um post de teste (on off curiosidade data musica icon isso poll quiz resposta mecore jogo news) — deixe vazio para execução normal'
         required: false
         default: ''
 
@@ -22,7 +22,7 @@ concurrency:
 jobs:
   postar:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -37,6 +37,7 @@ jobs:
         env:
           AUTH_KEY: ${{ secrets.AUTH_KEY }}
           CHANNEL_JID: ${{ secrets.CHANNEL_JID }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           FORCE: ${{ github.event.inputs.force }}

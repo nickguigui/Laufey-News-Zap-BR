@@ -5,14 +5,22 @@ Posta sozinho no seu canal do WhatsApp, usando o seu número:
 | Horário (Brasília) | Post |
 |---|---|
 | 06:00 | **CANAL ON‼️**, com o card da Laufey |
-| o dia todo | 🎬 vídeos/shorts novos do YouTube · 💿 lançamentos (Deezer) · 📰 notícias (Google Notícias) · 💬 destaques do r/laufey (opcional) |
-| ~12:00 | 🖼️ **Icon liberado** (da pasta `icons/`) |
-| ~15:00 | 🗳️ **Enquete do dia** (enquete nativa do WhatsApp) |
-| ~20:00 | 🖤 **Me core** |
+| 08:00 | 🧠 **Curiosidade do dia** |
+| 09:00 | 🎂 **Datas especiais** (aniversário dela, aniversário dos álbuns, Grammy) ou ⏳ **contagem regressiva** para lançamento anunciado (só quando tem) |
+| 10:00 | 🎧 **Música do dia**: card estilo player (capa, nome, artista, álbum), links do Spotify, Deezer e YouTube, e a **prévia oficial de 30s** em áudio |
+| 12:00 | 🖼️ **Icon liberado** (da pasta `icons/`) |
+| 14:00 | 🤔 **Isso ou aquilo** (enquete) |
+| 15:00 | 🗳️ **Enquete do dia** |
+| 17:00 | 🧠 **Quiz** (enquete) |
+| 19:00 | ✅ **Resposta do quiz** |
+| 20:00 | 🖤 **Me core** |
+| 21:30 | 🎮 **Jogo da noite** (complete a frase, música pelo signo, adivinhe pelos emojis...) |
 | 23:30 | **CANAL OFF‼️**, com o card da Laufey |
+| o dia todo | 🎬 vídeos/shorts novos do canal dela · 📺 entrevistas e shows em outros canais (com chave do YouTube) · 💿 lançamentos e 📣 anúncios (Deezer) · 📰 notícias · 💬 r/laufey (opcional) |
 
 - **40 segundos entre cada post** e no máximo 6 posts por execução (proteção contra ban).
-- No máximo 8 notícias e 2 posts do Reddit por dia.
+- No máximo 8 notícias, 3 vídeos de outros canais e 2 posts do Reddit por dia.
+- Conteúdo não se repete: enquetes, quiz, curiosidades, me core, jogos e músicas do dia só voltam depois que todos já saíram.
 - Na primeira execução ele só registra o que já existe, então não posta o histórico antigo.
 - Roda **de graça no GitHub Actions** a cada 30 min, sem precisar do PC ligado.
 
@@ -49,7 +57,7 @@ Para postar **um** teste de verdade no canal (PowerShell):
 ```bash
 $env:FORCE="on"; node src/run.js
 ```
-Opções de `FORCE`: `on`, `off`, `poll`, `mecore`, `icon`, `news`. Os testes forçados não contam como "já postado hoje".
+Opções de `FORCE`: `on`, `off`, `curiosidade`, `data`, `musica`, `icon`, `isso`, `poll`, `quiz`, `resposta`, `mecore`, `jogo`, `news`. Os testes forçados não contam como "já postado hoje".
 
 ## 3) Colocar no GitHub para rodar sozinho
 
@@ -68,7 +76,7 @@ Opções de `FORCE`: `on`, `off`, `poll`, `mecore`, `icon`, `news`. Os testes fo
 
 Pronto: a partir daí ele roda sozinho a cada 30 min, das 06:00 às 23:30.
 
-> 💸 **Minutos grátis:** repositório privado tem 2.000 min/mês grátis. O bot usa uns 1.000 a 1.600. Se um dia estourar, é só deixar o repositório **público**: aí os minutos são ilimitados, e a sessão continua segura porque o `auth.enc` é criptografado e a chave fica só nos Secrets.
+> 💸 **Minutos grátis:** repositório privado tem 2.000 min/mês grátis, e com toda a programação o bot fica perto desse limite (uns 1.500 a 2.000). **Recomendo deixar o repositório público**: aí os minutos são ilimitados. A sessão continua segura, porque o `auth.enc` é criptografado e a chave fica só nos Secrets (que ninguém vê, nem em repositório público).
 >
 > ⏰ O GitHub às vezes atrasa o agendamento em alguns minutos, então o CANAL ON pode sair 06:07 ou 06:20. É normal.
 
@@ -87,12 +95,27 @@ O bot posta **1 por dia** e nunca repete. Se a pasta estiver vazia, ele só pula
 | Textos do CANAL ON/OFF, legendas, formato das notícias | `src/format.js` |
 | Enquetes | `content/enquetes.json` |
 | "Me core" | `content/mecore.json` |
+| Curiosidades | `content/curiosidades.json` |
+| Quiz | `content/quiz.json` |
+| Isso ou aquilo e jogos da noite | `content/jogos.json` |
+| Datas especiais | `content/datas.json` |
 | Horários, limite de posts, intervalo de 40 s | `src/config.js` |
 | Foto dos cards ON/OFF | troque `assets/laufey.jpg` e rode `npm run cards` |
 
 Depois de editar, é só fazer `git push`.
 
-## 6) Reddit (opcional)
+## 6) Vídeos de outros canais do YouTube (entrevistas, TV, ao vivo)
+
+Precisa de uma chave grátis do Google (não precisa de aprovação nem cartão):
+1. Entre em https://console.cloud.google.com e crie um projeto (ex.: `laufey-bot`).
+2. Menu > **APIs e serviços > Biblioteca**, procure **YouTube Data API v3** e clique em **Ativar**.
+3. Menu > **APIs e serviços > Credenciais > Criar credenciais > Chave de API**. Copie a chave.
+4. (Recomendado) Clique na chave > **Restrições de API** > escolha só **YouTube Data API v3** > Salvar.
+5. No GitHub, crie o secret `YOUTUBE_API_KEY` com essa chave. Pra testar no PC, adicione `YOUTUBE_API_KEY=...` no `secrets.txt`.
+
+O bot só pega vídeos com cara de entrevista, show, sessão ao vivo ou TV, e ignora reacts, covers de fãs e God of War.
+
+## 7) Reddit (opcional)
 
 O Reddit bloqueia acesso sem login. Para ativar o r/laufey:
 1. Entre em https://www.reddit.com/prefs/apps > **create app** > tipo **script** (em redirect uri pode colocar `http://localhost`).

@@ -7,7 +7,7 @@ export const CANAL_ON = [
 
 _💜- Bom dia, boa tarde e boa noite, meus ouvintes! Tudo bem com vocês? ☕ E se você acabou de chegar no canal: seja muito bem-vindo, pega seu chá e se acomoda! 🫖_
 
-_Hoje tem notícias fresquinhas da Laufey, enquete pra votar, icon liberado e, se bater a bad, um 'me core' 🖤. Beijos do Nick, bora começar!! 💌_
+_Hoje tem notícias fresquinhas da Laufey, curiosidade, música do dia 🎧, quiz, enquete pra votar, icon liberado e, se bater a bad, um 'me core' 🖤. Beijos do Nick, bora começar!! 💌_
 
 (Canal abre às 6:00 e fecha às 23:30)`,
 
@@ -68,6 +68,8 @@ export function canalOff(seed) { return pick(CANAL_OFF, seed); }
 const TIPO_LANCAMENTO = { single: 'um single novo', album: 'um álbum novo', ep: 'um EP novo', compile: 'uma coletânea nova' };
 
 function dataBR(d) {
+  const ymd = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(d));
+  if (ymd) return `${ymd[3]}/${ymd[2]}/${ymd[1]}`;
   const t = Date.parse(d);
   return Number.isNaN(t) ? '' : new Date(t).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 }
@@ -78,7 +80,10 @@ export function formatarItem(item) {
       return item.shorts
         ? `💜 *SHORTS NOVO DA LAUFEY!* 📱✨\n\n_${item.titulo}_\n\nCorre ver que é rapidinho 🏃‍♀️💨\n▶️ ${item.link}`
         : `💜 *VÍDEO NOVO DA LAUFEY!* 🎬🎻\n\n_${item.titulo}_\n\nDá o play e já volta aqui pra comentar 👀\n▶️ ${item.link}`;
+    case 'youtube_outros':
+      return `💜 *LAUFEY POR AÍ* 📺✨\n\n_${item.titulo}_\n📡 Canal: ${item.canal}\n\nEntrevista, show ou apresentação nova, corre ver 🏃‍♀️\n▶️ ${item.link}`;
     case 'lancamento':
+      if (item.futuro) return `💜 *VEM AÍ!* 📣💿\n\nA Laufey vai lançar ${TIPO_LANCAMENTO[item.formato] || 'música nova'}:\n*${item.titulo}*\n📅 Sai em ${dataBR(item.data)}\n\nJá pode ir preparando o coração 🫀\n🎧 ${item.link}`;
       return `💜 *LANÇAMENTO NOVO!* 💿🎶\n\nA Laufey acabou de soltar ${TIPO_LANCAMENTO[item.formato] || 'música nova'}:\n*${item.titulo}*\n📅 ${dataBR(item.data)}\n\nJá pode chorar/dançar/surtar 😭💃\n🎧 ${item.link}`;
     case 'noticia':
       return `💜 *NOTÍCIA DO DIA* 📰☕\n\n*${item.titulo}*${item.fonte ? `\n🗞️ Fonte: ${item.fonte}` : ''}\n\n🔗 ${item.link}`;
@@ -103,4 +108,31 @@ export function enqueteTexto(e) {
 
 export function meCoreTexto(texto) {
   return `💜 *ME CORE* 🖤\n\n${texto}`;
+}
+
+export function curiosidadeTexto(texto) {
+  return `💜 *CURIOSIDADE DO DIA* 🧠✨\n\n${texto}\n\n_Você já sabia? Reage com 🤯 se não sabia!_`;
+}
+
+export function quizRespostaTexto(q) {
+  return `💜 *RESPOSTA DO QUIZ* ✅\n\n_${q.pergunta.replace(/[*_]/g, '')}_\n\nA resposta certa era: *${q.opcoes[q.correta]}* 🎉\n${q.explicacao}\n\nQuem acertou merece um chá ☕ Quem errou... merece dois 🍵🍵`;
+}
+
+export function jogoTexto(texto) {
+  return `💜 ${texto}`;
+}
+
+export function dataEspecialTexto(d, ano) {
+  const anos = ano - d.ano;
+  if (d.tipo === 'aniversario') {
+    return `💜 *HOJE É DIA DE FESTA!* 🎂🎉\n\nHoje a *Laufey* completa *${anos} anos*! 🥳🎻\n\nDeixa nos comentários... brincadeira, canal não tem comentário 😂 Reage com 🎂 pra mandar parabéns pra ela!\n\n_Feliz aniversário, Laufey! Obrigado por fazer a trilha sonora das nossas crises 💜_`;
+  }
+  if (d.tipo === 'grammy') {
+    return `💜 *HOJE NA HISTÓRIA* 🏆\n\nHá *${anos} ano${anos > 1 ? 's' : ''}*, a Laufey ganhava o *Grammy* de Melhor Álbum Vocal Pop Tradicional com *Bewitched*! ✨\n\nReage com 🏆 se você lembra onde estava nesse dia!`;
+  }
+  return `💜 *HOJE NA HISTÓRIA* 📅💿\n\nHá *${anos} ano${anos > 1 ? 's' : ''}* saía *${d.titulo}*! 🎶\n\nQual a sua música favorita dele? Reage com 💜 se ele mudou sua vida!`;
+}
+
+export function contagemTexto(item, dias) {
+  return `💜 *CONTAGEM REGRESSIVA* ⏳\n\n${dias === 1 ? '*FALTA 1 DIA*' : `*FALTAM ${dias} DIAS*`} para *${item.titulo}*! 📣\n📅 ${dataBR(item.data)}\n\n${dias <= 3 ? 'Tá chegando!!! Prepara o fone e os lencinhos 🎧🤧' : 'Vai separando o chá e o coração ☕💜'}`;
 }

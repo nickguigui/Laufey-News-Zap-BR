@@ -33,8 +33,9 @@ export async function deezer() {
   return arr(data)
     .filter((a) => Date.parse(a.release_date) >= limite)
     .map((a) => ({
-      id: `dz:${a.id}`,
+      id: `dz:${a.id}${Date.parse(a.release_date) > Date.now() ? ':pre' : ''}`,
       tipo: 'lancamento',
+      futuro: Date.parse(a.release_date) > Date.now(),
       titulo: a.title,
       link: a.link,
       imagem: a.cover_xl,
@@ -108,8 +109,30 @@ export async function reddit() {
     }));
 }
 
+// Vídeos da Laufey em OUTROS canais (entrevistas, TV, ao vivo). Precisa de YOUTUBE_API_KEY (grátis).
+const BOM = /interview|entrevista|live|ao vivo|perform|tiny desk|session|concert|show|tonight|late|grammy|npr|bbc|kexp|vevo|official|orchestra|symphony|podcast|talks?|q&a|backstage|red carpet|festival/i;
+const RUIM = /god of war|kratos|atreus|thor|loki|marvel|ragnar|reaction|react|tutorial|karaoke|cover by|piano cover|type beat|nightcore|sped up|slowed/i;
+export async function youtubeOutros() {
+  const key = process.env.YOUTUBE_API_KEY;
+  if (!key) return [];
+  const desde = new Date(Date.now() - 2 * DAY).toISOString();
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=date&maxResults=25&q=Laufey&publishedAfter=${desde}&key=${key}`;
+  const j = await get(url, 'json');
+  return arr(j.items)
+    .filter((v) => v.snippet.channelId !== CONFIG.youtubeChannelId)
+    .filter((v) => /laufey/i.test(v.snippet.title) && BOM.test(`${v.snippet.title} ${v.snippet.channelTitle}`) && !RUIM.test(v.snippet.title))
+    .map((v) => ({
+      id: `yto:${v.id.videoId}`,
+      tipo: 'youtube_outros',
+      titulo: v.snippet.title.replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&'),
+      canal: v.snippet.channelTitle,
+      link: `https://youtu.be/${v.id.videoId}`,
+      imagem: v.snippet.thumbnails?.high?.url,
+    }));
+}
+
 export async function buscarTudo() {
-  const fontes = { youtube, deezer, noticias, reddit };
+  const fontes = { youtube, youtubeOutros, deezer, noticias, reddit };
   const out = {};
   await Promise.all(Object.entries(fontes).map(async ([nome, fn]) => {
     try { out[nome] = await fn(); }

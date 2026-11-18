@@ -23,13 +23,21 @@ export const CONFIG = {
   maxPostsPerRun: 6,
   maxNewsPerDay: 8,
   maxRedditPerDay: 2,
-  // Horários do canal (Brasília)
+  maxYoutubeOutrosPerDay: 3,
+  // Horários do canal (Brasília). Cada um posta 1x por dia, na 1ª execução depois do horário.
   slots: {
-    on: '06:00',
-    icon: '12:00',
-    poll: '15:00',
-    mecore: '20:00',
-    off: '23:30',
+    on: '06:00',          // CANAL ON
+    curiosidade: '08:00', // curiosidade do dia
+    data: '09:00',        // data especial / contagem regressiva (só quando tem)
+    musica: '10:00',      // música do dia (card + prévia 30s)
+    icon: '12:00',        // icon liberado
+    isso: '14:00',        // isso ou aquilo (enquete)
+    poll: '15:00',        // enquete do dia
+    quiz: '17:00',        // quiz
+    resposta: '19:00',    // resposta do quiz
+    mecore: '20:00',      // me core
+    jogo: '21:30',        // joguinho da noite
+    off: '23:30',         // CANAL OFF
   },
 };
 

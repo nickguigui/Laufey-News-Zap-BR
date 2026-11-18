@@ -1,0 +1,13 @@
+[
+  { "data": "04-23", "ano": 1999, "tipo": "aniversario", "titulo": "Aniversário da Laufey" },
+  { "data": "02-04", "ano": 2024, "tipo": "grammy", "titulo": "Grammy de Bewitched" },
+  { "data": "04-30", "ano": 2021, "tipo": "album", "titulo": "Typical of Me" },
+  { "data": "08-26", "ano": 2022, "tipo": "album", "titulo": "Everything I Know About Love" },
+  { "data": "09-22", "ano": 2022, "tipo": "album", "titulo": "The Reykjavík Sessions" },
+  { "data": "03-02", "ano": 2023, "tipo": "album", "titulo": "A Night At The Symphony" },
+  { "data": "09-08", "ano": 2023, "tipo": "album", "titulo": "Bewitched" },
+  { "data": "04-26", "ano": 2024, "tipo": "album", "titulo": "Bewitched: The Goddess Edition" },
+  { "data": "12-06", "ano": 2024, "tipo": "album", "titulo": "A Night At The Symphony: Live at the Hollywood Bowl" },
+  { "data": "08-22", "ano": 2025, "tipo": "album", "titulo": "A Matter of Time" },
+  { "data": "04-10", "ano": 2026, "tipo": "album", "titulo": "A Matter of Time: The Final Hour" }
+]

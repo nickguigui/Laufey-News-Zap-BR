@@ -10,14 +10,14 @@
     "dry": "node src/run.js --dry",
     "cards": "node src/make-cards.js"
   },
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@whiskeysockets/baileys": "7.0.0-rc14",
     "fast-xml-parser": "^5.12.1",
     "pino": "^9.6.0",
-    "qrcode-terminal": "^0.12.0"
-  },
-  "devDependencies": {
+    "qrcode-terminal": "^0.12.0",
     "sharp": "^0.35.5"
   }
 }
