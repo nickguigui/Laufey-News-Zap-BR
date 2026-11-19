@@ -55,7 +55,12 @@
       "on": true,
       "n_youtubeOutros": 3,
       "n_noticias": 1,
-      "curiosidade": true
+      "curiosidade": true,
+      "musica": true,
+      "isso": true,
+      "poll": true,
+      "quiz": true,
+      "quizIndex": 27
     }
   },
   "icons": [],
@@ -67,18 +72,21 @@
     ],
     "quiz": [
       69,
-      72
+      72,
+      27
     ],
     "isso": [
       87,
-      7
+      7,
+      50
     ],
     "textos": [
       32
     ],
     "enquetes": [
       66,
-      65
+      65,
+      14
     ],
     "mecore": [
       85,
@@ -86,7 +94,8 @@
     ],
     "musicas": [
       "slow down",
-      "trouble"
+      "trouble",
+      "nocturne"
     ]
   },
   "seeded": true,
