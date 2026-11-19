@@ -29,7 +29,9 @@
     "reddit": []
   },
   "daily": {
-    "2026-11-18": {}
+    "2026-11-18": {
+      "data": true
+    }
   },
   "icons": [],
   "usados": {
@@ -53,5 +55,6 @@
       "slow down"
     ]
   },
-  "seeded": true
+  "seeded": true,
+  "figurinhas": []
 }
