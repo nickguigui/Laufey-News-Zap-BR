@@ -20,6 +20,7 @@ export const CONFIG = {
   subreddit: 'laufey',
   redditMinScore: 40,
   delayBetweenPostsMs: 40_000, // 40 s entre posts (anti-ban)
+  figurinhasPorVez: 10,
   maxPostsPerRun: 6,
   maxNewsPerDay: 8,
   maxRedditPerDay: 2,
@@ -31,6 +32,7 @@ export const CONFIG = {
     data: '09:00',        // data especial / contagem regressiva (só quando tem)
     musica: '10:00',      // música do dia (card + prévia 30s)
     icon: '12:00',        // icon liberado
+    figurinhas: '16:00',  // hora das figurinhas (10 de uma vez)
     isso: '14:00',        // isso ou aquilo (enquete)
     poll: '15:00',        // enquete do dia
     quiz: '17:00',        // quiz
@@ -47,6 +49,7 @@ export const paths = {
   authRuntime: path.join(ROOT, '.auth-runtime'),
   authLocal: path.join(ROOT, 'auth'),
   icons: path.join(ROOT, 'icons'),
+  figurinhas: path.join(ROOT, 'figurinhas'),
   assets: path.join(ROOT, 'assets'),
   content: path.join(ROOT, 'content'),
   secrets: secretsFile,

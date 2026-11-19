@@ -9,6 +9,7 @@ Posta sozinho no seu canal do WhatsApp, usando o seu número:
 | 09:00 | 🎂 **Datas especiais** (aniversário dela, aniversário dos álbuns, Grammy) ou ⏳ **contagem regressiva** para lançamento anunciado (só quando tem) |
 | 10:00 | 🎧 **Música do dia**: card estilo player (capa, nome, artista, álbum), links do Spotify, Deezer e YouTube, e a **prévia oficial de 30s** em áudio |
 | 12:00 | 🖼️ **Icon liberado** (da pasta `icons/`) |
+| 16:00 | 🎨 **HORA DAS FIGURINHASSS‼️**: 10 figurinhas da Laufey (da pasta `figurinhas/`) |
 | 14:00 | 🤔 **Isso ou aquilo** (enquete) |
 | 15:00 | 🗳️ **Enquete do dia** |
 | 17:00 | 🧠 **Quiz** (enquete) |
@@ -87,6 +88,14 @@ Salve os icons (do Pinterest etc.) na pasta **`icons/`** (`.jpg`, `.png` ou `.we
 - pelo PC: `git add icons; git commit -m "icons"; git push`
 
 O bot posta **1 por dia** e nunca repete. Se a pasta estiver vazia, ele só pula o icon do dia.
+
+### Figurinhas 🎨
+
+Salve imagens da Laufey na pasta **`figurinhas/`** (`.jpg`, `.png` ou `.webp`) e envie pro GitHub do mesmo jeito (pelo GitHub Desktop: Commit + Push).
+- Todo dia às **16:00** sai a **HORA DAS FIGURINHASSS‼️**: uma mensagem de abertura e depois **10 figurinhas**, com 40 s entre cada uma.
+- O bot transforma cada imagem em figurinha sozinho: 512×512, cantos arredondados e borda branca.
+- **PNG com fundo transparente** fica mais bonito, porque vira figurinha recortada com contorno branco.
+- Nunca repete. Pra 3 meses, são uns 900 arquivos. Se tiver menos de 10, ele posta as que tiver. Se não tiver nenhuma, pula o dia.
 
 ## 5) Personalizar
 

@@ -1,0 +1,3 @@
+Coloque aqui as imagens da Laufey para virar figurinha (jpg, png ou webp).
+PNG com fundo transparente fica mais bonito (vira figurinha recortada com contorno branco).
+O bot posta 10 por dia às 16:00, sem repetir.

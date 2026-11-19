@@ -272,3 +272,58 @@ export function contagemTexto(item, dias) {
   const falta = dias === 1 ? 'FALTA 1 DIA' : `FALTAM ${dias} DIAS`;
   return `${titulo(`CONTAGEM REGRESSIVA ⏳`)}\n\n💜- *${falta}* ${ital('para')} *${limpo(item.titulo)}*! 📣\n\n- 📅 \`${dataBR(item.data)}\`\n\n${ital(dias <= 3 ? 'Tá chegando!!! Prepara o fone e os lencinhos 🎧🤧' : 'Vai separando o chá e o coração ☕💜')}`;
 }
+
+const FIGURINHAS = [
+  ['HORA DAS FIGURINHASSS‼️ 🎨✨', 'Chegou o momento mais esperado do dia! Salva todas e usa sem moderação 😌'],
+  ['HORA DAS FIGURINHASSS‼️ 💜🖼️', 'Atenção, colecionadores! Pacotinho novo saindo do forno agora 🔥'],
+  ['HORA DAS FIGURINHASSS‼️ 🎀', 'Prepara o dedo pra salvar, porque hoje veio coisa boa 👀'],
+  ['HORA DAS FIGURINHASSS‼️ 🌷', 'Figurinha nova pra mandar no grupo e fingir que é casual 😂'],
+  ['HORA DAS FIGURINHASSS‼️ ☕🎻', 'Seu estoque de figurinha da Laufey agradece. Pode pegar!'],
+];
+
+export function figurinhasTexto(qtd, seed) {
+  const [cab, frase] = FIGURINHAS[Math.abs(seed) % FIGURINHAS.length];
+  return `${titulo(cab)}\n\n💜- ${ital(frase)}\n\n> *${qtd} figurinha${qtd > 1 ? 's' : ''} novinha${qtd > 1 ? 's' : ''}* da Laufey vindo aí 👇\n\n${ital('Pra salvar: toca na figurinha > Adicionar às favoritas ⭐')}`;
+}
+
+// ───────── Enfeites (estilo "aesthetic") ─────────
+const ENFEITES_TOPO = [
+  '˚₊‧꒰ა ♡ ໒꒱ ‧₊˚',
+  '⋆˚꩜｡𐔌՞. .՞𐦯⋆. 𐙚 ˚',
+  '˚୨୧⋆｡˚ ⋆',
+  '☆⋆｡𖦹°‧★',
+  '⋆｡‧˚ʚ♡ɞ˚‧｡⋆',
+  '✮⋆˙ ♡ ˙⋆✮',
+  '‧₊˚✩彡 ♡ 彡✩˚₊‧',
+  '⊹ ࣪ ˖ ♡ ˖ ࣪ ⊹',
+];
+const ENFEITES_FIM = [
+  '˚ ༘ ೀ⋆｡˚ ♡',
+  '⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆',
+  '𐙚 ⋆˚｡⋆୨୧˚',
+  '‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾.',
+  '₊˚⊹♡ ⋆｡˚',
+  '♡ ⋆｡˚ ❀ ⋆｡˚ ♡',
+];
+const BOLINHAS = ['⋆', '♡', '˚', '✮', '⊹', '𐙚'];
+
+const hash = (t) => { let h = 0; for (const c of t) h = (h * 31 + c.codePointAt(0)) | 0; return Math.abs(h); };
+
+/** Coloca enfeite em cima e embaixo, e troca os marcadores de lista por símbolos fofos. */
+export function decorar(txt) {
+  if (!txt) return txt;
+  const h = hash(txt);
+  const topo = ENFEITES_TOPO[h % ENFEITES_TOPO.length];
+  const fim = ENFEITES_FIM[(h >> 3) % ENFEITES_FIM.length];
+  const bol = BOLINHAS[(h >> 5) % BOLINHAS.length];
+  const corpo = txt.split('\n').map((l) => l.replace(/^- /, `${bol} `)).join('\n');
+  return `${topo}\n${corpo}\n\n${fim}`;
+}
+
+/** Enfeite curtinho pro nome das enquetes (que não aceitam negrito/itálico). */
+export function decorarEnquete(nome) {
+  const h = hash(nome);
+  const pares = [['˚₊‧꒰ა', '໒꒱‧₊˚'], ['⋆｡˚', '˚｡⋆'], ['✮⋆˙', '˙⋆✮'], ['ʚ♡ɞ', 'ʚ♡ɞ']];
+  const [a, b] = pares[h % pares.length];
+  return `${a} ${nome} ${b}`;
+}

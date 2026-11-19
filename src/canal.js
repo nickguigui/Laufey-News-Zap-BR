@@ -14,6 +14,7 @@ const CAMINHO = {
   video: '/newsletter/newsletter-video',
   audio: '/newsletter/newsletter-audio',
   document: '/newsletter/newsletter-document',
+  sticker: '/newsletter/newsletter-sticker',
 };
 
 async function uploadCanal(sock, buffer, tipo) {
@@ -61,14 +62,31 @@ async function montarMidia(sock, content) {
       }),
     };
   }
+  if (content.sticker) {
+    // figurinha = webp 512x512; no canal ela sobe pelo endpoint de imagem
+    const up = await uploadCanal(sock, content.sticker, process.env.STICKER_PATH || 'image');
+    return {
+      tipo: 'sticker', handle: up.handle,
+      msg: proto.Message.fromObject({
+        stickerMessage: {
+          url: up.url, directPath: up.directPath, fileSha256: up.sha, fileLength: up.tamanho,
+          mimetype: 'image/webp', width: 512, height: 512, isAnimated: false,
+          stickerSentTs: Date.now(),
+        },
+      }),
+    };
+  }
   if (content.audio) {
+    // canal só mostra áudio como mensagem de voz (ptt) em OGG/Opus
     const up = await uploadCanal(sock, content.audio, 'audio');
     return {
-      tipo: 'audio', handle: up.handle,
+      tipo: content.ptt ? 'ptt' : 'audio', handle: up.handle,
       msg: proto.Message.fromObject({
         audioMessage: {
           url: up.url, directPath: up.directPath, fileSha256: up.sha, fileLength: up.tamanho,
-          mimetype: content.mimetype || 'audio/mpeg', seconds: content.seconds || 30,
+          mimetype: content.mimetype || 'audio/ogg; codecs=opus', seconds: content.seconds || 30,
+          ptt: !!content.ptt,
+          ...(content.waveform ? { waveform: content.waveform } : {}),
         },
       }),
     };

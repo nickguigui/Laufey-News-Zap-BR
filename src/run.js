@@ -16,13 +16,14 @@ const FORCE = process.env.FORCE || '';
 const FONTES = ['youtube', 'youtubeOutros', 'deezer', 'noticias', 'reddit'];
 const LIMITE_DIA = { noticias: CONFIG.maxNewsPerDay, reddit: CONFIG.maxRedditPerDay, youtubeOutros: CONFIG.maxYoutubeOutrosPerDay };
 const DAY = 86_400_000;
+const figurinhasEnviadas = new Set(); // nomes das figurinhas confirmadas pelo WhatsApp nesta execução
 
 // ---------- estado ----------
 function carregarEstado() {
   let s = {};
   try { s = JSON.parse(fs.readFileSync(paths.state, 'utf8')); } catch {}
   s.seen ||= {}; for (const f of FONTES) s.seen[f] ||= [];
-  s.daily ||= {}; s.icons ||= [];
+  s.daily ||= {}; s.icons ||= []; s.figurinhas ||= [];
   s.usados ||= {};
   for (const k of ['curiosidades', 'quiz', 'isso', 'textos', 'enquetes', 'mecore', 'musicas']) s.usados[k] ||= [];
   return s;
@@ -75,6 +76,20 @@ const SLOTS = {
       audioUrl: m.preview,
       rotulo: `música do dia: ${m.titulo}`,
       marcar: () => s.usados.musicas.push(m.chave),
+    };
+  },
+
+  figurinhas: (s, dia) => {
+    const arquivos = fs.existsSync(paths.figurinhas)
+      ? fs.readdirSync(paths.figurinhas).filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && !s.figurinhas.includes(f)).sort()
+      : [];
+    if (!arquivos.length) { console.log('ℹ️  Sem figurinhas novas na pasta figurinhas/ — pulando por enquanto.'); return null; }
+    const lote = arquivos.slice(0, CONFIG.figurinhasPorVez);
+    return {
+      texto: F.figurinhasTexto(lote.length, seedDoDia(dia)),
+      figurinhas: lote.map((f) => path.join(paths.figurinhas, f)),
+      rotulo: `hora das figurinhas (${lote.length})`,
+      marcar: () => s.figurinhas.push(...lote.filter((f) => figurinhasEnviadas.has(f))),
     };
   },
 
@@ -167,7 +182,7 @@ async function baixar(url) {
 async function enviar(sock, jid, m) {
   if (m.poll) {
     try {
-      await enviarCanal(sock, jid, { poll: { name: m.poll.name.replace(/[*_]/g, '').slice(0, 250), values: m.poll.values, selectableCount: 1 } });
+      await enviarCanal(sock, jid, { poll: { name: F.decorarEnquete(m.poll.name.replace(/[*_]/g, '')).slice(0, 250), values: m.poll.values, selectableCount: 1 } });
       return;
     } catch (e) { console.warn(`⚠️  Enquete nativa falhou (${e.message}), enviando em texto.`); }
   }
@@ -178,14 +193,28 @@ async function enviar(sock, jid, m) {
   } catch (e) { console.warn(`⚠️  Não consegui baixar a imagem (${e.message}).`); }
   let foi = false;
   if (img) {
-    try { await enviarCanal(sock, jid, { image: img, caption: m.texto }); foi = true; }
+    try { await enviarCanal(sock, jid, { image: img, caption: texto }); foi = true; }
     catch (e) { console.warn(`⚠️  Envio com imagem falhou (${e.message}), mandando só texto.`); }
   }
-  if (!foi) await enviarCanal(sock, jid, { text: m.texto });
+  if (!foi) await enviarCanal(sock, jid, { text: texto });
+  if (m.figurinhas) {
+    const { criarFigurinha } = await import('./stickers.js');
+    for (const arq of m.figurinhas) {
+      console.log(`⏱️  Esperando ${CONFIG.delayBetweenPostsMs / 1000}s (figurinha)...`);
+      await sleep(CONFIG.delayBetweenPostsMs);
+      try {
+        await enviarCanal(sock, jid, { sticker: await criarFigurinha(fs.readFileSync(arq)) });
+        figurinhasEnviadas.add(path.basename(arq));
+        console.log(`   🎨 figurinha enviada: ${path.basename(arq)}`);
+      } catch (e) { console.warn(`⚠️  Figurinha ${path.basename(arq)} falhou (${e.message}).`); }
+    }
+  }
   if (m.audioUrl) {
     try {
       await sleep(3000);
-      await enviarCanal(sock, jid, { audio: await baixar(m.audioUrl), mimetype: 'audio/mpeg', seconds: 30 });
+      const { paraMensagemDeVoz } = await import('./audio.js');
+      const voz = await paraMensagemDeVoz(await baixar(m.audioUrl));
+      await enviarCanal(sock, jid, { audio: voz.ogg, ptt: true, seconds: voz.segundos, waveform: voz.waveform, mimetype: 'audio/ogg; codecs=opus' });
     } catch (e) { console.warn(`⚠️  Prévia em áudio falhou (${e.message}).`); }
   }
 }
@@ -281,9 +310,9 @@ async function main() {
     for (const m of enviarAgora) {
       const midia = [
         m.imagemBuffer && '🖼️ card gerado', m.imagemLocal && `🖼️ ${path.basename(m.imagemLocal)}`,
-        !m.imagemLocal && !m.imagemBuffer && m.imagemUrl && `🖼️ ${m.imagemUrl}`, m.audioUrl && '🔊 prévia 30s', m.poll && '🗳️ enquete nativa',
+        !m.imagemLocal && !m.imagemBuffer && m.imagemUrl && `🖼️ ${m.imagemUrl}`, m.audioUrl && '🔊 prévia 30s', m.poll && '🗳️ enquete nativa', m.figurinhas && `🎨 ${m.figurinhas.length} figurinhas`,
       ].filter(Boolean).join(' · ');
-      console.log(`\n──────── [${m.chave}${m.fonte ? ':' + m.fonte : ''}] ${midia}\n${m.poll ? `(enquete) ${m.poll.name}\n• ${m.poll.values.join('\n• ')}` : m.texto}`);
+      console.log(`\n──────── [${m.chave}${m.fonte ? ':' + m.fonte : ''}] ${midia}\n${m.poll ? `(enquete) ${F.decorarEnquete(m.poll.name.replace(/[*_]/g, ''))}\n• ${m.poll.values.join('\n• ')}` : F.decorar(m.texto)}`);
     }
     console.log(`\n✅ ${enviarAgora.length} mensagem(ns) seriam postadas, com ${CONFIG.delayBetweenPostsMs / 1000}s entre cada.`);
     return;
