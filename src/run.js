@@ -180,6 +180,7 @@ async function baixar(url) {
 }
 
 async function enviar(sock, jid, m) {
+  const texto = F.decorar(m.texto);
   if (m.poll) {
     try {
       await enviarCanal(sock, jid, { poll: { name: F.decorarEnquete(m.poll.name.replace(/[*_]/g, '')).slice(0, 250), values: m.poll.values, selectableCount: 1 } });
