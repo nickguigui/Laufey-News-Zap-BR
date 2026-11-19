@@ -41,7 +41,8 @@
       "quiz": true,
       "quizIndex": 72,
       "mecore": true,
-      "jogo": true
+      "jogo": true,
+      "resposta": true
     }
   },
   "icons": [],
