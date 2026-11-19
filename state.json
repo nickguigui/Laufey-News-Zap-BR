@@ -1,24 +1,67 @@
 {
   "seen": {
-    "youtube": [],
-    "youtubeOutros": [],
-    "deezer": [],
+    "youtube": [
+      "yt:woP3sJljOB8",
+      "yt:CcaNETDDESE",
+      "yt:_ps6J49ggCo",
+      "yt:k-cHI5GX_Jw",
+      "yt:At4U8BFiBrQ",
+      "yt:116YW2nhMvw",
+      "yt:jci37he_Fwk",
+      "yt:gCaIcF8scaY",
+      "yt:9Ye2P3TS-vQ",
+      "yt:dNOBt00AgyI",
+      "yt:WHuNHl3GxD4",
+      "yt:gXDBe22qG1I",
+      "yt:1QZrXgr0rqc",
+      "yt:GvhlIFJaqS4",
+      "yt:086r6NAj-dQ"
+    ],
+    "youtubeOutros": [
+      "yto:HlC2MvKI1FA",
+      "yto:rojRXIF8rsI",
+      "yto:APJe4fFQqDw"
+    ],
+    "deezer": [
+      "dz:1130580571"
+    ],
     "noticias": [],
     "reddit": []
   },
   "daily": {
     "2026-11-18": {
-      "on": true
+      "on": true,
+      "data": true,
+      "curiosidade": true,
+      "musica": true,
+      "isso": true,
+      "poll": true,
+      "quiz": true,
+      "quizIndex": 69,
+      "mecore": true
     }
   },
   "icons": [],
   "usados": {
-    "curiosidades": [],
-    "quiz": [],
-    "isso": [],
+    "curiosidades": [
+      110
+    ],
+    "quiz": [
+      69
+    ],
+    "isso": [
+      87
+    ],
     "textos": [],
-    "enquetes": [],
-    "mecore": [],
-    "musicas": []
-  }
+    "enquetes": [
+      66
+    ],
+    "mecore": [
+      85
+    ],
+    "musicas": [
+      "slow down"
+    ]
+  },
+  "seeded": true
 }
