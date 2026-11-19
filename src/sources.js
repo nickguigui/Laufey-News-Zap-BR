@@ -111,7 +111,8 @@ export async function reddit() {
 
 // Vídeos da Laufey em OUTROS canais (entrevistas, TV, ao vivo). Precisa de YOUTUBE_API_KEY (grátis).
 const BOM = /interview|entrevista|live|ao vivo|perform|tiny desk|session|concert|show|tonight|late|grammy|npr|bbc|kexp|vevo|official|orchestra|symphony|podcast|talks?|q&a|backstage|red carpet|festival/i;
-const RUIM = /god of war|kratos|atreus|thor|loki|marvel|ragnar|reaction|react|tutorial|karaoke|\bcovers?\b|type beat|nightcore|sped up|slowed|#singer|#singing|#shorts|lyrics|letra|tradu[cç][aã]o|fan ?made|edit\b/i;
+// títulos de fã (hashtags, covers, compilações, Roblox etc.) ficam de fora
+const RUIM = /#|god of war|kratos|atreus|thor|loki|marvel|ragnar|reaction|react|tutorial|karaoke|covers?\b|cover|type beat|nightcore|sped up|slowed|lyrics|letra|tradu[cç][aã]o|fan ?made|edit\b|roblox|leak|singers|compilation|ranking|tier list|vs\.?\s|amv|anime|piano|guitar|violin|ukulele|instrumental|8d|playlist|song ?:/i;
 export async function youtubeOutros() {
   const key = process.env.YOUTUBE_API_KEY;
   if (!key) return [];
