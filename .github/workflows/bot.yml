@@ -37,6 +37,10 @@ jobs:
 
       - run: npm ci --omit=dev --no-audit --no-fund
 
+      - name: Garantir ffmpeg (prévia em voz)
+        run: |
+          node -e "import('ffmpeg-static').then(m=>process.exit(require('fs').existsSync(m.default)?0:1),()=>process.exit(1))" || command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+
       - name: Rodar o bot
         env:
           AUTH_KEY: ${{ secrets.AUTH_KEY }}

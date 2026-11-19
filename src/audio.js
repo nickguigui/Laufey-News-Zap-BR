@@ -1,10 +1,18 @@
 // Converte a prévia MP3 em mensagem de voz do WhatsApp (OGG/Opus mono 48 kHz)
 // e calcula a "ondinha" (waveform) que aparece no player.
 import { spawn } from 'node:child_process';
+import fs from 'node:fs';
+
+// ffmpeg que vem com o bot (pacote ffmpeg-static); se não tiver, usa o do sistema
+let binario = process.env.FFMPEG || 'ffmpeg';
+try {
+  const estatico = (await import('ffmpeg-static')).default;
+  if (!process.env.FFMPEG && estatico && fs.existsSync(estatico)) binario = estatico;
+} catch { /* sem ffmpeg-static */ }
 
 function ffmpeg(args, entrada) {
   return new Promise((resolve, reject) => {
-    const p = spawn(process.env.FFMPEG || 'ffmpeg', args, { stdio: ['pipe', 'pipe', 'pipe'] });
+    const p = spawn(binario, args, { stdio: ['pipe', 'pipe', 'pipe'] });
     const out = []; let err = '';
     p.stdout.on('data', (d) => out.push(d));
     p.stderr.on('data', (d) => { err += d; });
