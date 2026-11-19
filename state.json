@@ -29,17 +29,7 @@
     "reddit": []
   },
   "daily": {
-    "2026-11-18": {
-      "on": true,
-      "data": true,
-      "curiosidade": true,
-      "musica": true,
-      "isso": true,
-      "poll": true,
-      "quiz": true,
-      "quizIndex": 69,
-      "mecore": true
-    }
+    "2026-11-18": {}
   },
   "icons": [],
   "usados": {

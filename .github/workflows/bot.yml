@@ -11,6 +11,10 @@ on:
         description: 'Forçar um post de teste (on off curiosidade data musica icon isso poll quiz resposta mecore jogo news) — deixe vazio para execução normal'
         required: false
         default: ''
+      max_posts:
+        description: 'Máximo de posts nesta execução (padrão 6)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -22,7 +26,7 @@ concurrency:
 jobs:
   postar:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -41,6 +45,7 @@ jobs:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           FORCE: ${{ github.event.inputs.force }}
+          MAX_POSTS: ${{ github.event.inputs.max_posts }}
         run: node src/run.js
 
       - name: Salvar estado

@@ -21,7 +21,7 @@ export const CONFIG = {
   redditMinScore: 40,
   delayBetweenPostsMs: 40_000, // 40 s entre posts (anti-ban)
   figurinhasPorVez: 10,
-  maxPostsPerRun: 6,
+  maxPostsPerRun: Number(process.env.MAX_POSTS) || 6,
   maxNewsPerDay: 8,
   maxRedditPerDay: 2,
   maxYoutubeOutrosPerDay: 3,
