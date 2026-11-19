@@ -20,7 +20,8 @@
     "youtubeOutros": [
       "yto:HlC2MvKI1FA",
       "yto:rojRXIF8rsI",
-      "yto:APJe4fFQqDw"
+      "yto:APJe4fFQqDw",
+      "yto:7QDx8u7AhAc"
     ],
     "deezer": [
       "dz:1130580571"
@@ -30,29 +31,47 @@
   },
   "daily": {
     "2026-11-18": {
-      "data": true
+      "data": true,
+      "on": true,
+      "n_youtubeOutros": 1,
+      "curiosidade": true,
+      "musica": true,
+      "isso": true,
+      "poll": true,
+      "quiz": true,
+      "quizIndex": 72,
+      "mecore": true,
+      "jogo": true
     }
   },
   "icons": [],
   "usados": {
     "curiosidades": [
-      110
+      110,
+      81
     ],
     "quiz": [
-      69
+      69,
+      72
     ],
     "isso": [
-      87
+      87,
+      7
     ],
-    "textos": [],
+    "textos": [
+      32
+    ],
     "enquetes": [
-      66
+      66,
+      65
     ],
     "mecore": [
-      85
+      85,
+      13
     ],
     "musicas": [
-      "slow down"
+      "slow down",
+      "trouble"
     ]
   },
   "seeded": true,
