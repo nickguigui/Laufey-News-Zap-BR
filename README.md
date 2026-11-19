@@ -75,7 +75,7 @@ Opções de `FORCE`: `on`, `off`, `curiosidade`, `data`, `musica`, `icon`, `isso
    - `CHANNEL_JID` → valor do `secrets.txt`
 4. Aba **Actions** > "Bot da Laufey" > **Run workflow** para rodar a primeira vez (dá para escolher um `force` para testar).
 
-Pronto: a partir daí ele roda sozinho a cada 30 min, das 06:00 às 23:30.
+Pronto: a partir daí ele roda sozinho a cada 10 min, das 06:00 às 23:30.
 
 > 💸 **Minutos grátis:** repositório privado tem 2.000 min/mês grátis, e com toda a programação o bot fica perto desse limite (uns 1.500 a 2.000). **Recomendo deixar o repositório público**: aí os minutos são ilimitados. A sessão continua segura, porque o `auth.enc` é criptografado e a chave fica só nos Secrets (que ninguém vê, nem em repositório público).
 >

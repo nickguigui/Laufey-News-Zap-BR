@@ -2,9 +2,9 @@ name: Bot da Laufey
 
 on:
   schedule:
-    # Horários em UTC. Brasília = UTC-3, então isto cobre 06:07 → 23:37 (BRT), a cada 30 min.
-    - cron: '7,37 9-23 * * *'
-    - cron: '7,37 0-2 * * *'
+    # Horários em UTC. Brasília = UTC-3: cobre 06:02 → 23:52 (BRT), a cada 10 min.
+    - cron: '2,12,22,32,42,52 9-23 * * *'
+    - cron: '2,12,22,32,42,52 0-2 * * *'
   workflow_dispatch:
     inputs:
       force:
