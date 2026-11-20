@@ -25,7 +25,7 @@ function carregarEstado() {
   s.seen ||= {}; for (const f of FONTES) s.seen[f] ||= [];
   s.daily ||= {}; s.icons ||= []; s.figurinhas ||= [];
   s.usados ||= {};
-  for (const k of ['curiosidades', 'quiz', 'isso', 'textos', 'enquetes', 'mecore', 'musicas']) s.usados[k] ||= [];
+  for (const k of ['curiosidades', 'quiz', 'isso', 'textos', 'enquetes', 'mecore', 'musicas', 'figauto']) s.usados[k] ||= [];
   return s;
 }
 function salvarEstado(s) {
@@ -79,17 +79,29 @@ const SLOTS = {
     };
   },
 
-  figurinhas: (s, dia) => {
+  figurinhas: async (s, dia) => {
     const arquivos = fs.existsSync(paths.figurinhas)
       ? fs.readdirSync(paths.figurinhas).filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && !s.figurinhas.includes(f)).sort()
       : [];
-    if (!arquivos.length) { console.log('ℹ️  Sem figurinhas novas na pasta figurinhas/ — pulando por enquanto.'); return null; }
-    const lote = arquivos.slice(0, CONFIG.figurinhasPorVez);
+    const n = CONFIG.figurinhasPorVez;
+    const lote = arquivos.slice(0, n).map((f) => ({
+      nome: f, gerar: async () => (await import('./stickers.js')).criarFigurinha(fs.readFileSync(path.join(paths.figurinhas, f))),
+    }));
+    // pasta vazia (ou com poucas): completa com figurinhas automáticas (frases + capas oficiais)
+    if (lote.length < n) {
+      const { figurinhasAuto } = await import('./figauto.js');
+      lote.push(...await figurinhasAuto(s.usados.figauto, seedDoDia(dia), n - lote.length));
+    }
     return {
       texto: F.figurinhasTexto(lote.length, seedDoDia(dia)),
-      figurinhas: lote.map((f) => path.join(paths.figurinhas, f)),
+      figurinhas: lote,
       rotulo: `hora das figurinhas (${lote.length})`,
-      marcar: () => s.figurinhas.push(...lote.filter((f) => figurinhasEnviadas.has(f))),
+      marcar: () => {
+        for (const f of lote) {
+          if (!figurinhasEnviadas.has(f.nome)) continue;
+          if (f.nome.startsWith('auto:')) s.usados.figauto.push(f.i); else s.figurinhas.push(f.nome);
+        }
+      },
     };
   },
 
@@ -199,15 +211,14 @@ async function enviar(sock, jid, m) {
   }
   if (!foi) await enviarCanal(sock, jid, { text: texto });
   if (m.figurinhas) {
-    const { criarFigurinha } = await import('./stickers.js');
-    for (const arq of m.figurinhas) {
+    for (const f of m.figurinhas) {
       console.log(`⏱️  Esperando ${CONFIG.delayBetweenPostsMs / 1000}s (figurinha)...`);
       await sleep(CONFIG.delayBetweenPostsMs);
       try {
-        await enviarCanal(sock, jid, { sticker: await criarFigurinha(fs.readFileSync(arq)) });
-        figurinhasEnviadas.add(path.basename(arq));
-        console.log(`   🎨 figurinha enviada: ${path.basename(arq)}`);
-      } catch (e) { console.warn(`⚠️  Figurinha ${path.basename(arq)} falhou (${e.message}).`); }
+        await enviarCanal(sock, jid, { sticker: await f.gerar() });
+        figurinhasEnviadas.add(f.nome);
+        console.log(`   🎨 figurinha enviada: ${f.nome}`);
+      } catch (e) { console.warn(`⚠️  Figurinha ${f.nome} falhou (${e.message}).`); }
     }
   }
   if (m.audioUrl) {
