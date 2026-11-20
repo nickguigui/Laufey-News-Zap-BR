@@ -31,7 +31,8 @@
       "dz:1130580571"
     ],
     "noticias": [
-      "news:decmatalaufeyconfiraatrilhasonoraperfeitapararenovarsuaplaylistdenatal"
+      "news:decmatalaufeyconfiraatrilhasonoraperfeitapararenovarsuaplaylistdenatal",
+      "news:albumreviewlaufeyamatteroftime"
     ],
     "reddit": []
   },
@@ -77,7 +78,8 @@
       "poll": true,
       "figurinhas": true,
       "quiz": true,
-      "quizIndex": 38
+      "quizIndex": 38,
+      "n_noticias": 1
     }
   },
   "icons": [],
