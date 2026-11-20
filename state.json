@@ -62,7 +62,8 @@
       "quiz": true,
       "quizIndex": 27,
       "resposta": true,
-      "mecore": true
+      "mecore": true,
+      "jogo": true
     }
   },
   "icons": [],
@@ -83,7 +84,8 @@
       50
     ],
     "textos": [
-      32
+      32,
+      89
     ],
     "enquetes": [
       66,
