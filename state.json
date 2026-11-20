@@ -71,7 +71,8 @@
       "on": true,
       "n_youtubeOutros": 1,
       "curiosidade": true,
-      "data": true
+      "data": true,
+      "musica": true
     }
   },
   "icons": [],
@@ -109,7 +110,8 @@
     "musicas": [
       "slow down",
       "trouble",
-      "nocturne"
+      "nocturne",
+      "dear soulmate"
     ],
     "figauto": []
   },
