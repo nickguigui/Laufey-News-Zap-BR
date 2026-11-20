@@ -79,7 +79,8 @@
       "figurinhas": true,
       "quiz": true,
       "quizIndex": 38,
-      "n_noticias": 1
+      "n_noticias": 1,
+      "resposta": true
     }
   },
   "icons": [],
