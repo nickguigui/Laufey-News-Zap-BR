@@ -80,7 +80,8 @@
       "quiz": true,
       "quizIndex": 38,
       "n_noticias": 1,
-      "resposta": true
+      "resposta": true,
+      "mecore": true
     }
   },
   "icons": [],
@@ -116,7 +117,8 @@
     "mecore": [
       85,
       13,
-      17
+      17,
+      83
     ],
     "musicas": [
       "slow down",
