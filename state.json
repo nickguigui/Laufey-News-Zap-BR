@@ -74,7 +74,8 @@
       "data": true,
       "musica": true,
       "isso": true,
-      "poll": true
+      "poll": true,
+      "figurinhas": true
     }
   },
   "icons": [],
@@ -117,7 +118,18 @@
       "nocturne",
       "dear soulmate"
     ],
-    "figauto": []
+    "figauto": [
+      15,
+      10,
+      27,
+      63,
+      119,
+      77,
+      56,
+      59,
+      86,
+      13
+    ]
   },
   "seeded": true,
   "figurinhas": []
