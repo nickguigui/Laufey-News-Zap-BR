@@ -73,7 +73,8 @@
       "curiosidade": true,
       "data": true,
       "musica": true,
-      "isso": true
+      "isso": true,
+      "poll": true
     }
   },
   "icons": [],
@@ -102,7 +103,8 @@
     "enquetes": [
       66,
       65,
-      14
+      14,
+      92
     ],
     "mecore": [
       85,
