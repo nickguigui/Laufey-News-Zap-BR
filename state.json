@@ -92,7 +92,8 @@
       "curiosidade": true,
       "data": true,
       "musica": true,
-      "isso": true
+      "isso": true,
+      "poll": true
     }
   },
   "icons": [],
@@ -126,7 +127,8 @@
       66,
       65,
       14,
-      92
+      92,
+      21
     ],
     "mecore": [
       85,
