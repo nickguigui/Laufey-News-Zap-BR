@@ -25,7 +25,8 @@
       "yto:9WZmkSiq0tI",
       "yto:ihYVmWIKIes",
       "yto:d87YHeyBWTw",
-      "yto:A_dlwvWETS4"
+      "yto:A_dlwvWETS4",
+      "yto:1hU0nFFlFSI"
     ],
     "deezer": [
       "dz:1130580571"
@@ -86,7 +87,8 @@
       "off": true
     },
     "2026-11-21": {
-      "on": true
+      "on": true,
+      "n_youtubeOutros": 1
     }
   },
   "icons": [],
