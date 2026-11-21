@@ -94,7 +94,9 @@
       "musica": true,
       "isso": true,
       "poll": true,
-      "figurinhas": true
+      "figurinhas": true,
+      "quiz": true,
+      "quizIndex": 105
     }
   },
   "icons": [],
@@ -110,7 +112,8 @@
       69,
       72,
       27,
-      38
+      38,
+      105
     ],
     "isso": [
       87,
