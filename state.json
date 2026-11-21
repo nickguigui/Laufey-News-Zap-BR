@@ -26,7 +26,8 @@
       "yto:ihYVmWIKIes",
       "yto:d87YHeyBWTw",
       "yto:A_dlwvWETS4",
-      "yto:1hU0nFFlFSI"
+      "yto:1hU0nFFlFSI",
+      "yto:A7StS3PAEnI"
     ],
     "deezer": [
       "dz:1130580571"
@@ -88,7 +89,7 @@
     },
     "2026-11-21": {
       "on": true,
-      "n_youtubeOutros": 1,
+      "n_youtubeOutros": 2,
       "curiosidade": true,
       "data": true,
       "musica": true,
@@ -96,7 +97,8 @@
       "poll": true,
       "figurinhas": true,
       "quiz": true,
-      "quizIndex": 105
+      "quizIndex": 105,
+      "resposta": true
     }
   },
   "icons": [],
