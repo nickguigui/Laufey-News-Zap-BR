@@ -89,7 +89,8 @@
     "2026-11-21": {
       "on": true,
       "n_youtubeOutros": 1,
-      "curiosidade": true
+      "curiosidade": true,
+      "data": true
     }
   },
   "icons": [],
