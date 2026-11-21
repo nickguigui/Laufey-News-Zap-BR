@@ -82,7 +82,8 @@
       "n_noticias": 1,
       "resposta": true,
       "mecore": true,
-      "jogo": true
+      "jogo": true,
+      "off": true
     }
   },
   "icons": [],
