@@ -81,7 +81,8 @@
       "quizIndex": 38,
       "n_noticias": 1,
       "resposta": true,
-      "mecore": true
+      "mecore": true,
+      "jogo": true
     }
   },
   "icons": [],
@@ -106,7 +107,8 @@
     ],
     "textos": [
       32,
-      89
+      89,
+      39
     ],
     "enquetes": [
       66,
