@@ -85,7 +85,9 @@
       "jogo": true,
       "off": true
     },
-    "2026-11-21": {}
+    "2026-11-21": {
+      "on": true
+    }
   },
   "icons": [],
   "usados": {
