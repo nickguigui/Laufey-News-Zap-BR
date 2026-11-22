@@ -108,7 +108,8 @@
       "on": true,
       "n_youtubeOutros": 1,
       "curiosidade": true,
-      "data": true
+      "data": true,
+      "musica": true
     }
   },
   "icons": [],
@@ -160,7 +161,8 @@
       "trouble",
       "nocturne",
       "dear soulmate",
-      "clockwork"
+      "clockwork",
+      "valentine"
     ],
     "figauto": [
       15,
