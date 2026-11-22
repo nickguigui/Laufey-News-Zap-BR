@@ -106,7 +106,8 @@
     },
     "2026-11-22": {
       "on": true,
-      "n_youtubeOutros": 1
+      "n_youtubeOutros": 1,
+      "curiosidade": true
     }
   },
   "icons": [],
@@ -116,7 +117,8 @@
       81,
       65,
       59,
-      64
+      64,
+      80
     ],
     "quiz": [
       69,
