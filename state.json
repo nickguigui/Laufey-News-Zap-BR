@@ -110,7 +110,8 @@
       "n_youtubeOutros": 2,
       "curiosidade": true,
       "data": true,
-      "musica": true
+      "musica": true,
+      "isso": true
     }
   },
   "icons": [],
@@ -135,7 +136,8 @@
       7,
       50,
       26,
-      29
+      29,
+      59
     ],
     "textos": [
       32,
