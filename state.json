@@ -107,7 +107,8 @@
     "2026-11-22": {
       "on": true,
       "n_youtubeOutros": 1,
-      "curiosidade": true
+      "curiosidade": true,
+      "data": true
     }
   },
   "icons": [],
