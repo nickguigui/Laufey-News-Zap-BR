@@ -100,7 +100,8 @@
       "quizIndex": 105,
       "resposta": true,
       "mecore": true,
-      "jogo": true
+      "jogo": true,
+      "off": true
     }
   },
   "icons": [],
