@@ -135,7 +135,8 @@
       "figurinhas": true,
       "quiz": true,
       "quizIndex": 60,
-      "resposta": true
+      "resposta": true,
+      "mecore": true
     }
   },
   "icons": [],
@@ -189,7 +190,8 @@
       17,
       83,
       28,
-      40
+      40,
+      27
     ],
     "musicas": [
       "slow down",
