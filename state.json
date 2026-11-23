@@ -119,7 +119,8 @@
       "quizIndex": 112,
       "resposta": true,
       "mecore": true,
-      "jogo": true
+      "jogo": true,
+      "off": true
     }
   },
   "icons": [],
