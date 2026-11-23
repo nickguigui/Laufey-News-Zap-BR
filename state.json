@@ -134,7 +134,8 @@
       "poll": true,
       "figurinhas": true,
       "quiz": true,
-      "quizIndex": 60
+      "quizIndex": 60,
+      "resposta": true
     }
   },
   "icons": [],
