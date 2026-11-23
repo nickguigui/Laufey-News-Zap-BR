@@ -127,7 +127,8 @@
       "on": true,
       "n_youtubeOutros": 1,
       "curiosidade": true,
-      "data": true
+      "data": true,
+      "musica": true
     }
   },
   "icons": [],
@@ -186,7 +187,8 @@
       "nocturne",
       "dear soulmate",
       "clockwork",
-      "valentine"
+      "valentine",
+      "it could happen to you"
     ],
     "figauto": [
       15,
