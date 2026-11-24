@@ -143,7 +143,8 @@
     "2026-11-24": {
       "on": true,
       "curiosidade": true,
-      "data": true
+      "data": true,
+      "musica": true
     }
   },
   "icons": [],
@@ -209,7 +210,8 @@
       "dear soulmate",
       "clockwork",
       "valentine",
-      "it could happen to you"
+      "it could happen to you",
+      "beautiful stranger"
     ],
     "figauto": [
       15,
