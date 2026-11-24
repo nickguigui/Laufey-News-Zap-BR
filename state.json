@@ -142,7 +142,8 @@
     },
     "2026-11-24": {
       "on": true,
-      "curiosidade": true
+      "curiosidade": true,
+      "data": true
     }
   },
   "icons": [],
