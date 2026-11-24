@@ -144,7 +144,8 @@
       "on": true,
       "curiosidade": true,
       "data": true,
-      "musica": true
+      "musica": true,
+      "isso": true
     }
   },
   "icons": [],
@@ -175,7 +176,8 @@
       26,
       29,
       59,
-      23
+      23,
+      18
     ],
     "textos": [
       32,
