@@ -1,4 +1,4 @@
-import { makeWASocket, useMultiFileAuthState, DisconnectReason, Browsers, fetchLatestBaileysVersion } from '@whiskeysockets/baileys';
+import { makeWASocket, useMultiFileAuthState, DisconnectReason, Browsers, fetchLatestBaileysVersion, fetchLatestWaWebVersion } from '@whiskeysockets/baileys';
 import pino from 'pino';
 
 /**
@@ -9,7 +9,10 @@ export async function connect(authDir, { onQr, phone } = {}) {
   const { state, saveCreds } = await useMultiFileAuthState(authDir);
   let changed = false;
   let version;
-  try { ({ version } = await fetchLatestBaileysVersion()); } catch { /* usa padrão */ }
+  // versão atual do WhatsApp Web (a lista do Baileys fica desatualizada e o WhatsApp recusa o login)
+  try { ({ version } = await fetchLatestWaWebVersion()); } catch {
+    try { ({ version } = await fetchLatestBaileysVersion()); } catch { /* usa padrão */ }
+  }
 
   const sock = makeWASocket({
     auth: state,

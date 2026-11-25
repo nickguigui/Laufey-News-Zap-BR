@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "E:/laufey news repository/Laufey News Zap BR/qr.html"
+        ],
+        "createdAt": "2026-11-25T22:38:48.114Z",
+        "reason": "Claude: src is set by script to qr.png on load; temporary local QR viewer"
+      }
+    ]
+  }
+}

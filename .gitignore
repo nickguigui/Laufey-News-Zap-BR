@@ -2,3 +2,5 @@ node_modules/
 auth/
 .auth-runtime/
 secrets.txt
+qr.png
+qr.html

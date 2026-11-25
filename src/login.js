@@ -14,7 +14,17 @@ console.log('Abra o WhatsApp no celular > Configurações > Aparelhos conectados
 
 const { sock } = await connect(paths.authLocal, {
   phone: process.env.PHONE,
-  onQr: (qr) => { console.clear(); console.log('Escaneie este QR code com o WhatsApp:\n'); qrcode.generate(qr, { small: true }); },
+  onQr: async (qr) => {
+    console.clear();
+    // tenta salvar o QR como imagem (qr.png) — mais fácil de escanear que o do terminal
+    try {
+      const QR = (await import('qrcode')).default;
+      await QR.toFile('qr.png', qr, { width: 480, margin: 2 });
+      console.log('📷 QR code salvo em qr.png (atualiza sozinho a cada ~20s). Escaneie a imagem.\n');
+      return;
+    } catch { /* sem o pacote qrcode: usa o do terminal */ }
+    console.log('Escaneie este QR code com o WhatsApp:\n'); qrcode.generate(qr, { small: true });
+  },
 });
 console.log('\n🟢 Conectado com sucesso!\n');
 
