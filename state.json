@@ -151,7 +151,8 @@
       "quiz": true,
       "quizIndex": 71,
       "resposta": true,
-      "mecore": true
+      "mecore": true,
+      "jogo": true
     }
   },
   "icons": [],
@@ -192,7 +193,8 @@
       39,
       78,
       16,
-      51
+      51,
+      86
     ],
     "enquetes": [
       66,
