@@ -151,7 +151,8 @@
       "quiz": true,
       "quizIndex": 46,
       "n_youtubeOutros": 1,
-      "resposta": true
+      "resposta": true,
+      "mecore": true
     }
   },
   "icons": [],
@@ -223,7 +224,8 @@
       40,
       27,
       88,
-      35
+      35,
+      59
     ],
     "musicas": [
       "slow down",
