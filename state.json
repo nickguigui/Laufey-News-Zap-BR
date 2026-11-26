@@ -142,7 +142,8 @@
     "2026-11-26": {
       "on": true,
       "curiosidade": true,
-      "data": true
+      "data": true,
+      "musica": true
     }
   },
   "icons": [],
@@ -222,7 +223,8 @@
       "valentine",
       "it could happen to you",
       "beautiful stranger",
-      "i ll forget about you"
+      "i ll forget about you",
+      "madwoman"
     ],
     "figauto": [
       15,
