@@ -145,7 +145,8 @@
       "data": true,
       "musica": true,
       "isso": true,
-      "poll": true
+      "poll": true,
+      "figurinhas": true
     }
   },
   "icons": [],
@@ -290,7 +291,17 @@
       84,
       42,
       40,
-      76
+      76,
+      131,
+      101,
+      126,
+      30,
+      155,
+      7,
+      73,
+      47,
+      68,
+      156
     ]
   },
   "seeded": true,
