@@ -141,7 +141,8 @@
     },
     "2026-11-26": {
       "on": true,
-      "curiosidade": true
+      "curiosidade": true,
+      "data": true
     }
   },
   "icons": [],
