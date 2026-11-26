@@ -149,7 +149,10 @@
       "poll": true,
       "figurinhas": true,
       "quiz": true,
-      "quizIndex": 25
+      "quizIndex": 25,
+      "resposta": true,
+      "mecore": true,
+      "jogo": true
     }
   },
   "icons": [],
@@ -194,7 +197,8 @@
       78,
       16,
       51,
-      86
+      86,
+      29
     ],
     "enquetes": [
       66,
@@ -215,7 +219,8 @@
       28,
       40,
       27,
-      88
+      88,
+      35
     ],
     "musicas": [
       "slow down",
