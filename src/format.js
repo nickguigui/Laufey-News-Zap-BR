@@ -238,9 +238,18 @@ export function quizRespostaTexto(q) {
 
 const INTRO_JOGO = ['Hora do jogo, ouvintes! 🎮', 'Bora brincar um pouquinho? 🎲', 'Valendo... nada, mas valendo! 😂', 'Joguinho da noite chegando! 🌙', 'Atenção, participantes! 📣'];
 
-/** Jogos: título no padrão, opções em lista, frases soltas em itálico. */
+// WhatsApp não tem spoiler: ~4000 caracteres invisíveis forçam o "Ler mais",
+// então a resposta só aparece quando a pessoa toca para expandir.
+export const LER_MAIS = '‎'.repeat(4001);
+const RESPOSTA = /^\(?\s*resposta\b|^resposta amanhã/i;
+
+/** Jogos: título no padrão, opções em lista, frases soltas em itálico. Respostas ficam escondidas no "Ler mais". */
 export function jogoTexto(texto) {
-  const linhas = texto.split('\n');
+  const todas = texto.split('\n');
+  const respostas = todas.filter((l) => RESPOSTA.test(l.trim()))
+    .map((l) => l.trim().replace(/^\((.*)\)$/, '$1').replace(/^resposta amanhã…?\s*brincadeira:\s*/i, 'Resposta: ').replace(/^resposta:?\s*/i, ''));
+  const linhas = todas.filter((l) => !RESPOSTA.test(l.trim()));
+  while (linhas.length > 1 && !linhas.at(-1).trim()) linhas.pop();
   const cab = linhas.shift().replace(/^🎮\s*\*(.+?)\*\s*(.*)$/, (_, a, b) => titulo(`🎮 ${a}${b ? ' ' + b : ''}`));
   const corpo = linhas.map((l) => {
     if (!l.trim()) return l;
@@ -253,7 +262,10 @@ export function jogoTexto(texto) {
     return ital(l);
   });
   const intro = INTRO_JOGO[texto.length % INTRO_JOGO.length];
-  return [cab, '', `💜- ${ital(intro)}`, ...corpo].join('\n');
+  const escondida = respostas.length
+    ? ['', '🤫 _Pensou? Não vale trapacear! A resposta tá escondida aqui embaixo_ 👇' + LER_MAIS, '', ...respostas.map((r) => `> ✔️ ${r}`)]
+    : [];
+  return [cab, '', `💜- ${ital(intro)}`, ...corpo, ...escondida].join('\n');
 }
 
 export function dataEspecialTexto(d, ano) {
