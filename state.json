@@ -153,7 +153,8 @@
       "poll": true,
       "figurinhas": true,
       "quiz": true,
-      "quizIndex": 14
+      "quizIndex": 14,
+      "resposta": true
     }
   },
   "icons": [],
