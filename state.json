@@ -155,7 +155,8 @@
       "resposta": true,
       "mecore": true,
       "jogo": true,
-      "n_noticias": 1
+      "n_noticias": 1,
+      "off": true
     }
   },
   "icons": [],
