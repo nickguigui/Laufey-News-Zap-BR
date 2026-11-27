@@ -152,7 +152,8 @@
       "quizIndex": 46,
       "n_youtubeOutros": 1,
       "resposta": true,
-      "mecore": true
+      "mecore": true,
+      "jogo": true
     }
   },
   "icons": [],
@@ -201,7 +202,8 @@
       16,
       51,
       86,
-      29
+      29,
+      79
     ],
     "enquetes": [
       66,
