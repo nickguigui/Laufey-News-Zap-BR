@@ -40,7 +40,8 @@
     ],
     "noticias": [
       "news:decmatalaufeyconfiraatrilhasonoraperfeitapararenovarsuaplaylistdenatal",
-      "news:albumreviewlaufeyamatteroftime"
+      "news:albumreviewlaufeyamatteroftime",
+      "news:laufeyawintersymphonytorontotickets2026concert"
     ],
     "reddit": []
   },
@@ -153,7 +154,8 @@
       "n_youtubeOutros": 1,
       "resposta": true,
       "mecore": true,
-      "jogo": true
+      "jogo": true,
+      "n_noticias": 1
     }
   },
   "icons": [],
