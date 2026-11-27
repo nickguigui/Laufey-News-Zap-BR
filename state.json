@@ -33,7 +33,8 @@
       "yto:JapYOoFiCt0",
       "yto:fYUig0h7myY",
       "yto:NRuyLi71DKU",
-      "yto:BQNof5mKXss"
+      "yto:BQNof5mKXss",
+      "yto:2LGzzwoRY6Y"
     ],
     "deezer": [
       "dz:1130580571"
@@ -141,7 +142,10 @@
       "n_noticias": 1,
       "off": true
     },
-    "2026-11-27": {}
+    "2026-11-27": {
+      "on": true,
+      "n_youtubeOutros": 1
+    }
   },
   "icons": [],
   "usados": {
