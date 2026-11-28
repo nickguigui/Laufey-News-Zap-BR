@@ -146,7 +146,8 @@
     "2026-11-28": {
       "on": true,
       "curiosidade": true,
-      "data": true
+      "data": true,
+      "musica": true
     }
   },
   "icons": [],
@@ -240,7 +241,8 @@
       "beautiful stranger",
       "i ll forget about you",
       "madwoman",
-      "g veit kemur"
+      "g veit kemur",
+      "seems like old times"
     ],
     "figauto": [
       15,
