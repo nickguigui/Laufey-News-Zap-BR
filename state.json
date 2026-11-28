@@ -48,22 +48,6 @@
     "reddit": []
   },
   "daily": {
-    "2026-11-21": {
-      "on": true,
-      "n_youtubeOutros": 2,
-      "curiosidade": true,
-      "data": true,
-      "musica": true,
-      "isso": true,
-      "poll": true,
-      "figurinhas": true,
-      "quiz": true,
-      "quizIndex": 105,
-      "resposta": true,
-      "mecore": true,
-      "jogo": true,
-      "off": true
-    },
     "2026-11-22": {
       "on": true,
       "n_youtubeOutros": 3,
@@ -158,7 +142,8 @@
       "mecore": true,
       "jogo": true,
       "off": true
-    }
+    },
+    "2026-11-28": {}
   },
   "icons": [],
   "usados": {
