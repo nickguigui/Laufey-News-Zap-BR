@@ -156,7 +156,8 @@
       "quizIndex": 14,
       "resposta": true,
       "mecore": true,
-      "jogo": true
+      "jogo": true,
+      "off": true
     }
   },
   "icons": [],
